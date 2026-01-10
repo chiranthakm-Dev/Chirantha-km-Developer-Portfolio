@@ -4,7 +4,7 @@ import { Application, SPEObject, SplineEvent } from "@splinetool/runtime";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
-import { Skill, SkillNames, SKILLS } from "@/data/constants";
+import { Skill, SkillNames, SKILLS, KEYBOARD_SKILLS } from "@/data/constants";
 import { sleep } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePreloader } from "./preloader";
@@ -12,6 +12,7 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { Section, getKeyboardState } from "./animated-background-config";
 import { useSounds } from "./realtime/hooks/use-sounds";
+import { SkillModal } from "./ui/skill-modal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +27,7 @@ const AnimatedBackground = () => {
   const { playPressSound, playReleaseSound } = useSounds();
 
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+  const [isSkillModalOpen, setIsSkillModalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<Section>("hero");
 
   // Animation controllers refs
@@ -37,29 +39,54 @@ const AnimatedBackground = () => {
 
   // --- Event Handlers ---
 
-  const handleMouseHover = (e: SplineEvent) => {
-    if (!splineApp || selectedSkillRef.current?.name === e.target.name) return;
-
-    if (e.target.name === "body" || e.target.name === "platform") {
-      if (selectedSkillRef.current) playReleaseSound();
-      setSelectedSkill(null);
-      selectedSkillRef.current = null;
-      if (splineApp.getVariable("heading") && splineApp.getVariable("desc")) {
-        splineApp.setVariable("heading", "");
-        splineApp.setVariable("desc", "");
-      }
-    } else {
-      if (!selectedSkillRef.current || selectedSkillRef.current.name !== e.target.name) {
-        const skill = SKILLS[e.target.name as SkillNames];
-        if (skill) {
-          if (selectedSkillRef.current) playReleaseSound();
-          playPressSound();
-          setSelectedSkill(skill);
-          selectedSkillRef.current = skill;
-        }
-      }
-    }
+  // Name mapping for flexible skill matching (handles case variations and aliases)
+  const SKILL_NAME_MAPPING: Record<string, string> = {
+    "python": "python", "py": "python",
+    "c": "c",
+    "c++": "cpp", "cpp": "cpp", "cplusplus": "cpp",
+    "react": "react", "reactjs": "react", "react.js": "react",
+    "github": "github", "gh": "github",
+    "vercel": "vercel",
+    "llm": "llm", "llms": "llm", "large language models": "llm",
+    "java": "java",
+    "go": "go", "golang": "go",
+    "kotlin": "kotlin",
+    "js": "js", "javascript": "js",
+    "sql": "sql",
+    "mle": "mle", "machine learning engineering": "mle",
+    "tensorflow": "tensorflow", "tf": "tensorflow",
+    "scikit": "scikit", "scikit-learn": "scikit", "sklearn": "scikit",
+    "fastapi": "fastapi", "fast-api": "fastapi",
+    "docker": "docker",
+    "gcp": "gcp", "google cloud": "gcp", "google cloud platform": "gcp",
+    "mongodb": "mongodb", "mongo": "mongodb",
+    "postgres": "postgres", "postgresql": "postgres", "pg": "postgres",
+    "kubernetes": "kubernetes", "k8s": "kubernetes", "kube": "kubernetes",
+    "redhat": "redhat", "red hat": "redhat", "red hat linux": "redhat",
+    "restapi": "restapi", "rest api": "restapi", "rest": "restapi",
+    "cybersec": "cybersec", "cybersecurity": "cybersec", "security": "cybersec",
+    "fintech": "fintech", "fin tech": "fintech",
   };
+
+  // Helper to normalize skill name
+  const normalizeSkillName = (skillName: string): string => {
+    const normalizedName = skillName.toLowerCase().trim();
+    return SKILL_NAME_MAPPING[normalizedName] || normalizedName;
+  };
+
+  // Helper to check if skill is in KEYBOARD_SKILLS (only the 25 specified skills)
+  const isValidKeyboardSkill = (skillName: string): boolean => {
+    const mappedName = normalizeSkillName(skillName);
+    return KEYBOARD_SKILLS.some((skill) => skill.name === mappedName);
+  };
+  
+  // Helper to get skill by name (with flexible matching)
+  const getSkillByName = (skillName: string): Skill | undefined => {
+    const mappedName = normalizeSkillName(skillName);
+    return KEYBOARD_SKILLS.find((skill) => skill.name === mappedName) || SKILLS[mappedName as SkillNames];
+  };
+
+  // Hover handler removed - only click/press will open modal
 
   const handleSplineInteractions = () => {
     if (!splineApp) return;
@@ -77,21 +104,60 @@ const AnimatedBackground = () => {
     splineApp.addEventListener("keyUp", () => {
       if (!splineApp || isInputFocused()) return;
       playReleaseSound();
+      setIsSkillModalOpen(false);
+      setSelectedSkill(null);
+      selectedSkillRef.current = null;
+      if (splineApp.getVariable("heading") && splineApp.getVariable("desc")) {
       splineApp.setVariable("heading", "");
       splineApp.setVariable("desc", "");
-    });
-    splineApp.addEventListener("keyDown", (e) => {
-      if (!splineApp || isInputFocused()) return;
-      const skill = SKILLS[e.target.name as SkillNames];
-      if (skill) {
-        playPressSound();
-        setSelectedSkill(skill);
-        selectedSkillRef.current = skill;
-        splineApp.setVariable("heading", skill.label);
-        splineApp.setVariable("desc", skill.shortDescription);
       }
     });
-    splineApp.addEventListener("mouseHover", handleMouseHover);
+    splineApp.addEventListener("keyDown", (e: SplineEvent) => {
+      if (!splineApp || isInputFocused()) return;
+      
+      const targetName = e.target.name;
+      console.log("KeyDown event on:", targetName); // Debug log
+      
+      // Only respond to valid keyboard skills (the 25 specified)
+      if (!isValidKeyboardSkill(targetName)) {
+        console.log("Invalid skill:", targetName); // Debug log
+        return;
+      }
+      
+      const skill = getSkillByName(targetName);
+      if (skill && isValidKeyboardSkill(skill.name)) {
+        console.log("Opening modal for:", skill.label); // Debug log
+        playPressSound();
+        setSelectedSkill(skill);
+        setIsSkillModalOpen(true);
+        selectedSkillRef.current = skill;
+      }
+    });
+    
+    // Click event for mouse/touch interactions (replaces hover)
+    splineApp.addEventListener("mouseDown", (e: SplineEvent) => {
+      if (!splineApp || isInputFocused()) return;
+      
+      const targetName = e.target.name;
+      console.log("MouseDown event on:", targetName); // Debug log
+      
+      // Only respond to valid keyboard skills (the 25 specified)
+      if (!isValidKeyboardSkill(targetName)) {
+        console.log("Invalid skill (click):", targetName); // Debug log
+        return;
+      }
+      
+      const skill = getSkillByName(targetName);
+      if (skill && isValidKeyboardSkill(skill.name)) {
+        console.log("Opening modal for (click):", skill.label); // Debug log
+        playPressSound();
+        setSelectedSkill(skill);
+        setIsSkillModalOpen(true);
+        selectedSkillRef.current = skill;
+      }
+    });
+    
+    // Removed mouseHover event - popup opens only on click/press (keyDown or mouseDown)
   };
 
   // --- Animation Setup Helpers ---
@@ -188,7 +254,7 @@ const AnimatedBackground = () => {
 
     const start = () => {
       removePrevTweens();
-      Object.values(SKILLS)
+      KEYBOARD_SKILLS
         .sort(() => Math.random() - 0.5)
         .forEach((skill, idx) => {
           const keycap = splineApp.findObjectByName(skill.name);
@@ -208,7 +274,7 @@ const AnimatedBackground = () => {
 
     const stop = () => {
       removePrevTweens();
-      Object.values(SKILLS).forEach((skill) => {
+      KEYBOARD_SKILLS.forEach((skill) => {
         const keycap = splineApp.findObjectByName(skill.name);
         if (!keycap) return;
         const t = gsap.to(keycap.position, {
@@ -279,6 +345,24 @@ const AnimatedBackground = () => {
   // Initialize GSAP and Spline interactions
   useEffect(() => {
     if (!splineApp) return;
+    
+    // Debug: List all objects in the scene to see what keycaps exist
+    const allObjects = splineApp.getAllObjects();
+    console.log("=== Spline Scene Objects ===");
+    const objectNames = allObjects.map(obj => obj.name).filter(name => name);
+    console.log("Total objects:", allObjects.length);
+    console.log("Object names:", objectNames);
+    console.log("Expected skill names:", KEYBOARD_SKILLS.map(s => s.name));
+    
+    // Check which skills have matching keycaps
+    const foundSkills = KEYBOARD_SKILLS.filter(skill => {
+      const found = allObjects.find(obj => obj.name === skill.name || obj.name === skill.name.toLowerCase());
+      return !!found;
+    });
+    console.log("Found keycaps for skills:", foundSkills.map(s => s.name));
+    console.log("Missing keycaps:", KEYBOARD_SKILLS.filter(s => !foundSkills.includes(s)).map(s => s.name));
+    console.log("===========================");
+    
     handleSplineInteractions();
     setupScrollAnimations();
     bongoAnimationRef.current = getBongoAnimation();
@@ -325,12 +409,8 @@ const AnimatedBackground = () => {
     }
   }, [theme, splineApp, isMobile, activeSection]);
 
-  useEffect(() => {
-    if (!selectedSkill || !splineApp) return;
-    // console.log(selectedSkill)
-    splineApp.setVariable("heading", selectedSkill.label);
-    splineApp.setVariable("desc", selectedSkill.shortDescription);
-  }, [selectedSkill]);
+  // Remove the old Spline variable setting since we're using modal now
+  // useEffect for setting Spline variables removed - using modal instead
 
   // Handle rotation and teardown animations based on active section
   useEffect(() => {
@@ -426,6 +506,7 @@ const AnimatedBackground = () => {
   }, [splineApp, isLoading, activeSection]);
 
   return (
+    <>
     <Suspense fallback={<div>Loading...</div>}>
       <Spline
         className="w-full h-full fixed"
@@ -437,6 +518,21 @@ const AnimatedBackground = () => {
         scene="/assets/skills-keyboard.spline"
       />
     </Suspense>
+      <SkillModal
+        skill={selectedSkill}
+        isOpen={isSkillModalOpen}
+        onClose={() => {
+          setIsSkillModalOpen(false);
+          setSelectedSkill(null);
+          selectedSkillRef.current = null;
+          if (splineApp) {
+            playReleaseSound();
+            splineApp.setVariable("heading", "");
+            splineApp.setVariable("desc", "");
+          }
+        }}
+      />
+    </>
   );
 };
 

@@ -23,23 +23,21 @@ const config = {
     "Spline",
     "Framer Motion",
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
-  site: "https://nareshkhatri.site",
+  author: "Chirantha K M",
+  email: "chirantha.km88@gmail.com",
+  site: "chiranthkm-dev.vercel",
 
   // for github stars button
-  githubUsername: "naresh-khatri",
-  githubRepo: "3d-portfolio",
+  githubUsername: "chiranthakm-Dev",
+  githubRepo: "",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
-    facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    linkedin: "https://www.linkedin.com/in/chiranthkm",
+    instagram: "https://www.instagram.com/chiranth_k_m_?igsh=MXZrdzdlaHF6NHhuag%3D%3D&utm_source=qr",
+    github: "https://github.com/chiranthakm-Dev",
   },
 };
 export { config };

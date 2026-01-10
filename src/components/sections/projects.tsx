@@ -1,138 +1,528 @@
 "use client";
-import Image from "next/image";
-import React from "react";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalTrigger,
-} from "../ui/animated-modal";
-import { FloatingDock } from "../ui/floating-dock";
+import { useState } from "react";
+import AceTernityLogo from "@/components/logos/aceternity";
+import SlideShow from "@/components/slide-show";
+import { Button } from "@/components/ui/button";
+import { TypographyH3, TypographyP } from "@/components/ui/typography";
+import { ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
 import Link from "next/link";
-
-import SmoothScroll from "../smooth-scroll";
-import projects, { Project } from "@/data/projects";
-import { cn } from "@/lib/utils";
-import { SectionHeader } from "./section-header";
-
+import { ReactNode } from "react";
 import SectionWrapper from "../ui/section-wrapper";
+import { SectionHeader } from "./section-header";
+import { PinContainer } from "../ui/3d-pin";
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { ProjectModal } from "../ui/project-modal";
+import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
+import {
+  SiChakraui,
+  SiDocker,
+  SiExpress,
+  SiFirebase,
+  SiJavascript,
+  SiMongodb,
+  SiPostgresql,
+  SiPrisma,
+  SiPython,
+  SiReactquery,
+  SiSanity,
+  SiShadcnui,
+  SiSocketdotio,
+  SiSupabase,
+  SiTailwindcss,
+  SiThreedotjs,
+  SiTypescript,
+  SiVuedotjs,
+  SiTensorflow,
+  SiScikitlearn,
+  SiFastapi,
+  SiKubernetes,
+  SiGooglecloud,
+  SiArduino,
+  SiPandas,
+  SiNumpy,
+} from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
+const BASE_PATH = "/assets/projects-screenshots";
 
-const ProjectsSection = () => {
+const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
   return (
-    <SectionWrapper id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
-      <SectionHeader id='projects' title="Projects" />
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        {projects.map((project, index) => (
-          <Modall key={project.src} project={project} />
-        ))}
-      </div>
-    </SectionWrapper>
-  );
-};
-const Modall = ({ project }: { project: Project }) => {
-  return (
-    <div className="flex items-center justify-center">
-      <Modal>
-        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
-          <div
-            className="relative w-[400px] h-auto rounded-lg overflow-hidden"
-            style={{ aspectRatio: "3/2" }}
-          >
-            <Image
-              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
-              src={project.src}
-              alt={project.title}
-              width={300}
-              height={300}
-            />
-            <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
-              <div className="flex flex-col h-full items-start justify-end p-6">
-                <div className="text-lg text-left">{project.title}</div>
-                <div className="text-xs bg-white text-black rounded-lg w-fit px-2">
-                  {project.category}
-                </div>
-              </div>
-            </div>
-          </div>
-        </ModalTrigger>
-        <ModalBody className="md:max-w-4xl md:max-h-[80%] overflow-auto">
-          <SmoothScroll isInsideModal={true}>
-            <ModalContent>
-              <ProjectContents project={project} />
-            </ModalContent>
-          </SmoothScroll>
-          <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
-            </button>
-            <Link href={project.live} target="_blank">
-              <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-                Visit
-              </button>
-            </Link>
-          </ModalFooter>
-        </ModalBody>
-      </Modal>
+    <div className="flex flex-col md:flex-row items-center justify-start gap-3 my-3 mb-8">
+      <Link
+        className="font-mono underline flex gap-2"
+        rel="noopener"
+        target="_new"
+        href={live}
+      >
+        <Button variant={"default"} size={"sm"}>
+          Visit Website
+          <ArrowUpRight className="ml-3 w-5 h-5" />
+        </Button>
+      </Link>
+      {repo && (
+        <Link
+          className="font-mono underline flex gap-2"
+          rel="noopener"
+          target="_new"
+          href={repo}
+        >
+          <Button variant={"default"} size={"sm"}>
+            Github
+            <ArrowUpRight className="ml-3 w-5 h-5" />
+          </Button>
+        </Link>
+      )}
     </div>
   );
 };
-export default ProjectsSection;
 
-const ProjectContents = ({ project }: { project: Project }) => {
+export type Skill = {
+  title: string;
+  bg: string;
+  fg: string;
+  icon: ReactNode;
+};
+
+const PROJECT_SKILLS = {
+  next: {
+    title: "Next.js",
+    bg: "black",
+    fg: "white",
+    icon: <RiNextjsFill />,
+  },
+  chakra: {
+    title: "Chakra UI",
+    bg: "black",
+    fg: "white",
+    icon: <SiChakraui />,
+  },
+  node: {
+    title: "Node.js",
+    bg: "black",
+    fg: "white",
+    icon: <RiNodejsFill />,
+  },
+  python: {
+    title: "Python",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython />,
+  },
+  prisma: {
+    title: "Prisma",
+    bg: "black",
+    fg: "white",
+    icon: <SiPrisma />,
+  },
+  postgres: {
+    title: "PostgreSQL",
+    bg: "black",
+    fg: "white",
+    icon: <SiPostgresql />,
+  },
+  mongo: {
+    title: "MongoDB",
+    bg: "black",
+    fg: "white",
+    icon: <SiMongodb />,
+  },
+  express: {
+    title: "Express",
+    bg: "black",
+    fg: "white",
+    icon: <SiExpress />,
+  },
+  reactQuery: {
+    title: "React Query",
+    bg: "black",
+    fg: "white",
+    icon: <SiReactquery />,
+  },
+  shadcn: {
+    title: "ShadCN UI",
+    bg: "black",
+    fg: "white",
+    icon: <SiShadcnui />,
+  },
+  aceternity: {
+    title: "Aceternity",
+    bg: "black",
+    fg: "white",
+    icon: <AceTernityLogo />,
+  },
+  tailwind: {
+    title: "Tailwind",
+    bg: "black",
+    fg: "white",
+    icon: <SiTailwindcss />,
+  },
+  docker: {
+    title: "Docker",
+    bg: "black",
+    fg: "white",
+    icon: <SiDocker />,
+  },
+  firebase: {
+    title: "Firebase",
+    bg: "black",
+    fg: "white",
+    icon: <SiFirebase />,
+  },
+  js: {
+    title: "JavaScript",
+    bg: "black",
+    fg: "white",
+    icon: <SiJavascript />,
+  },
+  ts: {
+    title: "TypeScript",
+    bg: "black",
+    fg: "white",
+    icon: <SiTypescript />,
+  },
+  vue: {
+    title: "Vue.js",
+    bg: "black",
+    fg: "white",
+    icon: <SiVuedotjs />,
+  },
+  react: {
+    title: "React.js",
+    bg: "black",
+    fg: "white",
+    icon: <RiReactjsFill />,
+  },
+  sanity: {
+    title: "Sanity",
+    bg: "black",
+    fg: "white",
+    icon: <SiSanity />,
+  },
+  spline: {
+    title: "Spline",
+    bg: "black",
+    fg: "white",
+    icon: <SiThreedotjs />,
+  },
+  framerMotion: {
+    title: "Framer Motion",
+    bg: "black",
+    fg: "white",
+    icon: <TbBrandFramerMotion />,
+  },
+  supabase: {
+    title: "Supabase",
+    bg: "black",
+    fg: "white",
+    icon: <SiSupabase />,
+  },
+  tensorflow: {
+    title: "TensorFlow",
+    bg: "black",
+    fg: "white",
+    icon: <SiTensorflow />,
+  },
+  scikit: {
+    title: "Scikit-Learn",
+    bg: "black",
+    fg: "white",
+    icon: <SiScikitlearn />,
+  },
+  fastapi: {
+    title: "FastAPI",
+    bg: "black",
+    fg: "white",
+    icon: <SiFastapi />,
+  },
+  kubernetes: {
+    title: "Kubernetes",
+    bg: "black",
+    fg: "white",
+    icon: <SiKubernetes />,
+  },
+  gcp: {
+    title: "Google Cloud",
+    bg: "black",
+    fg: "white",
+    icon: <SiGooglecloud />,
+  },
+  arduino: {
+    title: "Arduino",
+    bg: "black",
+    fg: "white",
+    icon: <SiArduino />,
+  },
+  pandas: {
+    title: "Pandas",
+    bg: "black",
+    fg: "white",
+    icon: <SiPandas />,
+  },
+  numpy: {
+    title: "NumPy",
+    bg: "black",
+    fg: "white",
+    icon: <SiNumpy />,
+  },
+};
+
+export type Project = {
+  id: string;
+  category: string;
+  title: string;
+  src: string;
+  screenshots: string[];
+  skills: { frontend: Skill[]; backend: Skill[] };
+  content: React.ReactNode | any;
+  github?: string;
+  live: string;
+};
+
+const projects: Project[] = [
+  {
+    id: "ovia",
+    category: "Healthcare AI",
+    title: "OVIA Wellness Assistant",
+    src: "/assets/ovia dashboard.png",
+    screenshots: ["ovia dashboard.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.fastapi,
+        PROJECT_SKILLS.scikit,
+      ],
+    },
+    live: "#",
+    github: "https://github.com/Raksha-Gangadhar/ovia-wellness-assistant",
+    get content() {
+      return (
+        <div className="space-y-5">
+          <TypographyP className="font-mono text-base md:text-lg leading-relaxed !mt-0">
+            Full-stack React.js + FastAPI web app for women's health diagnostics, achieving <strong className="text-primary">95% PCOS AUC</strong>, <strong className="text-primary">98% thyroid AUC</strong>, and <strong className="text-primary">99% menstrual prediction AUC</strong> via Scikit-learn models (Random Forest, SVM, Logistic Regression).
+          </TypographyP>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Platform Integration</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Integrates SQLite ORM for <strong className="text-foreground">1,000+ user logs</strong>, JWT auth, and <strong className="text-foreground">Grok AI</strong> for real-time chatbot insights on 5 wellness metrics (mood, sleep, exercise, hydration, stress).
+          </p>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Performance Metrics</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Reduces risk detection time by <strong className="text-foreground">80%</strong> compared to manual screening, with responsive UI handling <strong className="text-foreground">50 concurrent sessions</strong>.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "threat-analog",
+    category: "Cybersecurity",
+    title: "ThreatLog Analyzer",
+    src: "/assets/THREAT ANALYZER.png",
+    screenshots: ["THREAT ANALYZER.png"],
+    live: "#",
+    github: "https://github.com/chiranthakm-Dev/threatlog-analyzer",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.mongo,
+        PROJECT_SKILLS.pandas,
+      ],
+    },
+    get content() {
+      return (
+        <div className="space-y-5">
+          <TypographyP className="font-mono text-base md:text-lg leading-relaxed !mt-0">
+            Cybersecurity log analysis platform parsing Apache/NGINX logs at <strong className="text-primary">10,000+ lines/sec</strong> using Pandas and regex patterns to detect XSS, LFI/RFI, brute-force (threshold: 5 reqs/sec/IP), and scanner User-Agents.
+          </TypographyP>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Threat Analysis Features</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Features threat scoring (0-100 scale), IOC extraction (IPs, hashes), and Matplotlib visualizations of <strong className="text-foreground">20+ attack types</strong>, with anomaly detection via z-score (<strong className="text-foreground">&gt;2.5σ flagged</strong>).
+          </p>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Performance & Detection</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Processes <strong className="text-foreground">1GB logs in &lt;5min</strong>, identifying <strong className="text-foreground">95% of common OWASP Top 10 threats</strong> for SOC teams.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "ai-traffic",
+    category: "Smart Cities & AI",
+    title: "Traffic Management IoT-AI",
+    src: "/assets/dashboard.png",
+    screenshots: ["dashboard.png"],
+    live: "#",
+    github: "https://github.com/chiranthakm-Dev/traffic-management-iot-ai",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.python,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.tensorflow,
+        PROJECT_SKILLS.docker,
+      ],
+    },
+    get content() {
+      return (
+        <div className="space-y-5">
+          <TypographyP className="font-mono text-base md:text-lg leading-relaxed !mt-0">
+            IoT-AI traffic optimizer using <strong className="text-primary">YOLOv8 object detection (mAP@0.5: 0.92)</strong> on OpenCV-processed camera feeds for vehicle counting across 4 lanes, with dynamic signal timing (green phase: 20-60s based on density).
+          </TypographyP>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">IoT & Performance</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            NVIDIA Jetson Nano backend simulates <strong className="text-foreground">MQTT IoT comms (100ms latency)</strong>, Pygame GUI for real-time heatmaps, reducing avg wait time by <strong className="text-foreground">35% vs fixed timers</strong> in 1km urban sims.
+          </p>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Scalability</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Handles <strong className="text-foreground">500+ vehicles/hour/junction</strong> with pedestrian priority logic.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "ai-bi-dashboard",
+    category: "Business Intelligence",
+    title: "AI-Powered Business Dashboard",
+    src: "/assets/AI BUSINESSS DASHBOARD.png",
+    screenshots: ["AI BUSINESSS DASHBOARD.png"],
+    live: "#",
+    github: "https://github.com/chiranthakm-Dev/ai-powered-business-dashboard",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.pandas,
+        PROJECT_SKILLS.tensorflow,
+      ],
+    },
+    get content() {
+      return (
+        <div className="space-y-5">
+          <TypographyP className="font-mono text-base md:text-lg leading-relaxed !mt-0">
+            Interactive BI dashboard with React.js frontend, Tailwind CSS, and ML APIs (e.g., Prophet forecasting, <strong className="text-primary">isolation forest anomalies at 99% precision</strong>) for real-time KPIs from CSV/JSON uploads (<strong className="text-primary">up to 1M rows</strong>).
+          </TypographyP>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">AI Features</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Supports <strong className="text-foreground">NLQ via LLM integration</strong>, <strong className="text-foreground">15+ Chart.js viz types</strong>, and drill-downs, processing queries in <strong className="text-foreground">&lt;2s with 90% insight accuracy</strong> on sales/ops data.
+          </p>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Scalability & Impact</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Scales to <strong className="text-foreground">100 dashboards/users</strong>, boosting decision speed by <strong className="text-foreground">50%</strong> through auto-generated trends.
+          </p>
+        </div>
+      );
+    },
+  },
+];
+
+// Export projects array for use in other components
+export { projects };
+
+// ProjectsSection component
+const ProjectsSection = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
   return (
     <>
-      <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-        {project.title}
-      </h4>
-      <div className="flex flex-col md:flex-row md:justify-evenly max-w-screen overflow-hidden md:overflow-visible">
-        <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
-          <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
-            Frontend
-          </p>
-          {project.skills.frontend?.length > 0 && (
-            <FloatingDock items={project.skills.frontend} />
-          )}
-        </div>
-        {project.skills.backend?.length > 0 && (
-          <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
-            <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
-              Backend
-            </p>
-            <FloatingDock items={project.skills.backend} />
+      <SectionWrapper
+        id="projects"
+        className="flex flex-col items-center justify-center min-h-screen py-20 z-10"
+      >
+        <div className="w-full max-w-7xl px-4 md:px-8 mx-auto">
+          <SectionHeader
+            id="projects"
+            title="Projects"
+            desc="Things I've built."
+            className="mb-12 md:mb-20"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="h-[25rem] w-full flex items-center justify-center relative mx-auto"
+                style={{ maxWidth: "100%" }}
+              >
+                <div
+                  className="w-full h-full cursor-pointer relative"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleProjectClick(project);
+                  }}
+                  onMouseDown={(e) => {
+                    e.preventDefault();
+                  }}
+                >
+                  <PinContainer
+                    title={project.title}
+                    href="#"
+                    containerClassName="w-full h-full"
+                  >
+                    <div className="flex flex-col gap-4 w-full">
+                      <div className="relative w-full h-48 overflow-hidden rounded-lg bg-muted">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={project.src}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold text-white truncate">{project.title}</h3>
+                        <p className="text-sm text-muted-foreground">{project.category}</p>
+                      </div>
+                    </div>
+                  </PinContainer>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        )}
-      </div>
-      {/* <div className="flex justify-center items-center">
-        {project.screenshots.map((image, idx) => (
-          <motion.div
-            key={"images" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            whileTap={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={`${project.src.split("1.png")[0]}${image}`}
-              alt="screenshots"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div> */}
-      {project.content}
+        </div>
+      </SectionWrapper>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedProject(null);
+        }}
+      />
     </>
   );
 };
+
+export default ProjectsSection;

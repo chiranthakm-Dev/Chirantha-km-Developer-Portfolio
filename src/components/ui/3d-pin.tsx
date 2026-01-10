@@ -28,6 +28,12 @@ export const PinContainer = ({
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href === "#") {
+      e.preventDefault();
+    }
+  };
+
   return (
     <Link
       className={cn(
@@ -36,7 +42,8 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}
+      onClick={handleClick}
+      href={href || "#"}
     >
       <div
         style={{

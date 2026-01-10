@@ -84,6 +84,7 @@ const ExperienceCard = ({
           <div className="flex flex-wrap gap-2">
             {experience.skills.map((skillName) => {
               const skill = SKILLS[skillName as SkillNames];
+              if (!skill) return null;
               return (
                 <Badge
                   key={skillName}
