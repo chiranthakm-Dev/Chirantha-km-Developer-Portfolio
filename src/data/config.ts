@@ -3,10 +3,10 @@ const config = {
   description: {
     long: "Explore the portfolio of Chirantha K M, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
     short:
-      "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
+      "Discover the portfolio of Chirantha K M, a full-stack developer creating interactive web experiences and innovative projects.",
   },
   keywords: [
-    "Naresh",
+    "Chirantha",
     "portfolio",
     "full-stack developer",
     "creative technologist",
@@ -29,7 +29,7 @@ const config = {
 
   // for github stars button
   githubUsername: "chiranthakm-Dev",
-  githubRepo: "",
+  githubRepo: "https://github.com/chiranthakm-Dev",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";

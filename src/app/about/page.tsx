@@ -43,26 +43,26 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "naresh.khatri2345@gmail",
+    content: "chirantha.km88@gmail.com",
     href: "mailto:naresh.khatri2345@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
-    content: "1234567890",
+    content: "8310228282",
     href: "tel:1234567890",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/naresh-khatri/",
-    content: "/naresh-khatri",
+    href: "https://www.linkedin.com/in/chiranthkm",
+    content: "/Chirantha K M",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Naresh-Khatri",
-    content: "/naresh-khatri",
+    href: "https://github.com/chiranthakm-Dev",
+    content: "/Chirantha K m",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -286,18 +286,23 @@ function Page() {
             style={{ backdropFilter: "blur(2px)" }}
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
-            <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Naresh, a Fullstack developer passionate about
-              creating meaningful digital experiences. With great in Web
-              development, I thrive on turning ideas into reality through coding
-              and design. My journey began with a fascination for technology and
-              a drive to make a positive impact.
-            </p>
-            <p className="mb-10">
-              When I&apos;m not coding, you can find me [Your
-              Interests/Hobbies], exploring new technologies, or sipping coffee
-              while brainstorming my next project.
-            </p>
+            <p className="mb-5">
+  Hey there! I&apos;m Chirantha K M, a Computer Science and Business Systems
+  undergraduate and ML-focused developer passionate about building intelligent,
+  scalable, and impactful digital systems. My work spans AI/ML, full-stack
+  development, IoT, and cloud platforms, where I enjoy solving real-world
+  problems using data-driven and system-level thinking.
+</p>
+
+<p className="mb-10">
+  From developing AI-powered wellness and business intelligence platforms to
+  building smart traffic and cybersecurity systems, I thrive at the intersection
+  of engineering, analytics, and product design. I&apos;m driven by curiosity,
+  continuous learning, and a strong interest in deploying solutions that create
+  measurable impact.
+</p>
+
+<h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">
               {!toolsLoaded ? (
