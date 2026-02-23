@@ -44,13 +44,13 @@ const CONTACT_LINKS = [
   {
     name: "Email",
     content: "chirantha.km88@gmail.com",
-    href: "mailto:naresh.khatri2345@gmail.com",
+    href: "mailto:chirantha.km88@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
     content: "8310228282",
-    href: "tel:1234567890",
+    href: "tel:8310228282",
     icon: <FaPhone height={"50px"} />,
   },
   {
@@ -62,7 +62,7 @@ const CONTACT_LINKS = [
   {
     name: "GitHub",
     href: "https://github.com/chiranthakm-Dev",
-    content: "/Chirantha K m",
+    content: "/Chirantha K M",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -251,7 +251,7 @@ function Page() {
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Naresh Khatri</p>
+                <p className="text-center text-xl">Chirantha K M</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
                   Web Developer
                 </div>
@@ -302,7 +302,6 @@ function Page() {
   measurable impact.
 </p>
 
-<h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">
               {!toolsLoaded ? (
@@ -336,34 +335,6 @@ function Page() {
                 </Splide>
               )}
             </div>
-            {/* <div className="">
-              <Splide
-                options={{
-                  type: "loop",
-                  interval: 2000,
-                  autoplay: true,
-                  pagination: false,
-                  speed: 3000,
-                  perPage: 5,
-                  perMove: 1,
-                  rewind: true,
-                  easing: "cubic-bezier(0.25, 1, 0.5, 1)",
-                  arrows: false,
-                }}
-                aria-label="My Favorite Images"
-              >
-                {TOOLS.map((tool) => (
-                  <SplideSlide key={tool.name}>
-                    <div
-                      key={tool.name}
-                      className="w-fit p-2 border-[.5px] border-zinc-600 rounded-md"
-                    >
-                      {tool.icon}
-                    </div>
-                  </SplideSlide>
-                ))}
-              </Splide>
-            </div> */}
           </div>
         </main>
       </div>

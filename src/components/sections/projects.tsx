@@ -1,16 +1,14 @@
 "use client";
 import { useState } from "react";
 import AceTernityLogo from "@/components/logos/aceternity";
-import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import SectionWrapper from "../ui/section-wrapper";
 import { SectionHeader } from "./section-header";
 import { PinContainer } from "../ui/3d-pin";
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ProjectModal } from "../ui/project-modal";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
@@ -430,6 +428,32 @@ const projects: Project[] = [
       );
     },
   },
+  {
+    id: "financial-risk-analytics-engine",
+    category: "FinTech",
+    title: "Financial Risk Analytics Engine",
+    src: "/assets/projects-screenshots/financial-risk-analytics-engine/1.png",
+    screenshots: ["financial-risk-analytics-engine/1.png"],
+    live: "#",
+    github: "https://github.com/chiranthakm-Dev/financial-risk-analytics-engine",
+    skills: {
+      frontend: [PROJECT_SKILLS.react],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.pandas, PROJECT_SKILLS.numpy, PROJECT_SKILLS.postgres],
+    },
+    get content() {
+      return (
+        <div className="space-y-5">
+          <TypographyP className="font-mono text-base md:text-lg leading-relaxed !mt-0">
+            A high-performance quantitative risk analytics system built to process large-scale financial data. Implements real-time risk metrics, volatility analysis, and structured financial modeling under performance constraints.
+          </TypographyP>
+          <TypographyH3 className="!mt-6 mb-3 text-lg md:text-xl font-semibold">Technical Highlights</TypographyH3>
+          <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
+            Uses vectorized Pandas/NumPy pipelines, SQL-backed aggregation, and optimized sampling for sub-second metric computation on large tick datasets.
+          </p>
+        </div>
+      );
+    },
+  },
 ];
 
 // Export projects array for use in other components
@@ -471,11 +495,11 @@ const ProjectsSection = () => {
                   ease: "easeOut",
                 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="h-[25rem] w-full flex items-center justify-center relative mx-auto"
+                className="w-full flex items-stretch relative mx-auto h-auto md:h-[25rem]"
                 style={{ maxWidth: "100%" }}
               >
                 <div
-                  className="w-full h-full cursor-pointer relative"
+                  className="w-full h-full cursor-pointer relative flex"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
@@ -490,8 +514,8 @@ const ProjectsSection = () => {
                     href="#"
                     containerClassName="w-full h-full"
                   >
-                    <div className="flex flex-col gap-4 w-full">
-                      <div className="relative w-full h-48 overflow-hidden rounded-lg bg-muted">
+                    <div className="flex flex-col gap-4 w-full h-full">
+                      <div className="relative w-full flex-shrink-0 h-48 md:h-56 overflow-hidden rounded-lg bg-muted">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={project.src}
@@ -500,9 +524,11 @@ const ProjectsSection = () => {
                           loading="lazy"
                         />
                       </div>
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-bold text-white truncate">{project.title}</h3>
-                        <p className="text-sm text-muted-foreground">{project.category}</p>
+                      <div className="space-y-2 flex-1 flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-xl font-bold text-white truncate">{project.title}</h3>
+                          <p className="text-sm text-muted-foreground">{project.category}</p>
+                        </div>
                       </div>
                     </div>
                   </PinContainer>
