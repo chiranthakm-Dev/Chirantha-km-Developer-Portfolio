@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#021226" />
+    </linearGradient>
+    <linearGradient id="gradLine" x1="0" x2="1">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- Title -->
+  <text x="60" y="70" fill="#e6f0ff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Financial Risk Analytics Engine</text>
+
+  <!-- Axis -->
+  <g transform="translate(80,120)">
+    <rect x="0" y="0" width="1040" height="460" rx="12" fill="#081124" />
+
+    <!-- grid lines -->
+    <g stroke="#0b2130" stroke-width="1">
+      <line x1="40" y1="40" x2="1000" y2="40" />
+      <line x1="40" y1="140" x2="1000" y2="140" />
+      <line x1="40" y1="240" x2="1000" y2="240" />
+      <line x1="40" y1="340" x2="1000" y2="340" />
+    </g>
+
+    <!-- bars (volatility) -->
+    <g transform="translate(60,60)">
+      <rect x="0" y="260" width="40" height="60" rx="6" fill="#2dd4bf" opacity="0.9" />
+      <rect x="80" y="200" width="40" height="120" rx="6" fill="#60a5fa" />
+      <rect x="160" y="170" width="40" height="150" rx="6" fill="#f97316" />
+      <rect x="240" y="100" width="40" height="220" rx="6" fill="#a78bfa" />
+      <rect x="320" y="130" width="40" height="190" rx="6" fill="#34d399" />
+      <rect x="400" y="80" width="40" height="240" rx="6" fill="#fb7185" />
+    </g>
+
+    <!-- line (risk metric) -->
+    <polyline points="60,300 140,260 220,220 300,200 380,180 460,150 540,170 620,140 700,120 780,130" fill="none" stroke="url(#gradLine)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <g fill="#fff">
+      <circle cx="60" cy="300" r="5" fill="#06b6d4" />
+      <circle cx="140" cy="260" r="5" fill="#7c3aed" />
+      <circle cx="220" cy="220" r="5" fill="#06b6d4" />
+      <circle cx="300" cy="200" r="5" fill="#7c3aed" />
+      <circle cx="380" cy="180" r="5" fill="#06b6d4" />
+      <circle cx="460" cy="150" r="5" fill="#7c3aed" />
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(760,24)">
+      <rect x="0" y="0" width="200" height="60" rx="8" fill="#021226" opacity="0.6" />
+      <text x="16" y="22" fill="#e6f0ff" font-size="13" font-family="Inter, Arial">Volatility (bars)</text>
+      <text x="16" y="44" fill="#e6f0ff" font-size="13" font-family="Inter, Arial">Real-time Risk (line)</text>
+    </g>
+  </g>
+
+  <!-- footer label -->
+  <text x="60" y="610" fill="#94a3b8" font-size="13" font-family="Inter, Arial">Tech: Python • Pandas • NumPy • SQL • Financial Modeling</text>
+</svg>

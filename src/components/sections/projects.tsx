@@ -432,8 +432,8 @@ const projects: Project[] = [
     id: "financial-risk-analytics-engine",
     category: "FinTech",
     title: "Financial Risk Analytics Engine",
-    src: "/assets/projects-screenshots/financial-risk-analytics-engine/1.png",
-    screenshots: ["financial-risk-analytics-engine/1.png"],
+    src: "/assets/projects-screenshots/financial-risk-analytics-engine/1.svg",
+    screenshots: ["financial-risk-analytics-engine/1.svg"],
     live: "#",
     github: "https://github.com/chiranthakm-Dev/financial-risk-analytics-engine",
     skills: {
