@@ -7,8 +7,16 @@ import {
   useMotionValue,
   useSpring,
   type HTMLMotionProps,
-  type SpringOptions,
-} from 'motion/react';
+} from 'framer-motion';
+
+// Minimal Spring options compatible with framer-motion's useSpring
+type SpringOptions = {
+  stiffness?: number;
+  damping?: number;
+  mass?: number;
+  restDelta?: number;
+  restSpeed?: number;
+};
 
 import { cn } from '@/lib/utils';
 import { SlidingNumber } from '../sliding-number';

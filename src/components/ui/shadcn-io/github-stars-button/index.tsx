@@ -7,14 +7,22 @@ import {
   useMotionValue,
   useSpring,
   type HTMLMotionProps,
-  type SpringOptions,
-} from 'motion/react';
+} from 'framer-motion';
 
 import { cn } from '@/lib/utils';
 import { SlidingNumber } from '../sliding-number';
 import { Fragment, useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 
 type FormatNumberResult = { number: string[]; unit: string };
+
+// Minimal Spring options compatible with framer-motion's useSpring
+type SpringOptions = {
+  stiffness?: number;
+  damping?: number;
+  mass?: number;
+  restDelta?: number;
+  restSpeed?: number;
+};
 
 function formatNumber(num: number, formatted: boolean): FormatNumberResult {
   if (formatted) {
