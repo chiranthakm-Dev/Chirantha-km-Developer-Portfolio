@@ -1,17 +1,14 @@
-import NyanCat from "@/components/nyan-cat";
-import { cn } from "@/lib/utils";
-import Spline from "@splinetool/react-spline";
-import { Application } from "@splinetool/runtime";
-import React, { Suspense } from "react";
-
-const NotFoundPage = () => {
+import Link from "next/link";
+import { content as c } from "@/data/content";
+export default function NotFound() {
   return (
-    <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Spline scene="/assets/404.spline" style={{ height: "100vh" }} />
-      </Suspense>
-    </>
+    <main id="main-content" className="not-found">
+      <p className="eyebrow">{c.labels.errorCode}</p>
+      <h1>{c.labels.notFound}</h1>
+      <p>{c.labels.notFoundDetail}</p>
+      <Link className="pill" href="/">
+        {c.labels.back}
+      </Link>
+    </main>
   );
-};
-
-export default NotFoundPage;
+}

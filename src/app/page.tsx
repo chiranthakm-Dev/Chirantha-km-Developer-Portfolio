@@ -1,30 +1,18 @@
-"use client";
-
-import React from "react";
-import SmoothScroll from "@/components/smooth-scroll";
-import { cn } from "@/lib/utils";
-import AnimatedBackground from "@/components/animated-background";
-import SkillsSection from "@/components/sections/skills";
-import ExperienceSection from "@/components/sections/experience";
-import ProjectsSection from "@/components/sections/projects";
-import AchievementsSection from "@/components/sections/achievements";
-import ContactSection from "@/components/sections/contact";
-import HeroSection from "@/components/sections/hero";
-
-function MainPage() {
+import {
+  Hero,
+  PortfolioSections,
+  Footer,
+} from "@/components/portfolio/sections";
+import MotionEnhancement from "@/components/portfolio/motion";
+export default function Home() {
   return (
-    <SmoothScroll>
-      <AnimatedBackground />
-      <main className={cn("bg-slate-100 dark:bg-transparent canvas-overlay-mode")}>
-        <HeroSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <AchievementsSection />
-        <ContactSection />
+    <>
+      <main id="main-content">
+        <Hero />
+        <PortfolioSections />
       </main>
-    </SmoothScroll>
+      <Footer />
+      <MotionEnhancement />
+    </>
   );
 }
-
-export default MainPage;

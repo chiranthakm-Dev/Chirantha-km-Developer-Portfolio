@@ -1,0 +1,134 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "h1": 1,
+      "sections": 9,
+      "fonts": "loaded",
+      "bodyFont": "__Inter_d8ebd1, __Inter_Fallback_d8ebd1, sans-serif"
+    },
+    {
+      "menuClosed": true,
+      "hash": "#experience"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "sections": 9,
+      "fonts": "loaded",
+      "bodyFont": "__Inter_d8ebd1, __Inter_Fallback_d8ebd1, sans-serif"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "sections": 9,
+      "fonts": "loaded",
+      "bodyFont": "__Inter_d8ebd1, __Inter_Fallback_d8ebd1, sans-serif"
+    },
+    {
+      "mode": "no-js",
+      "sections": [
+        {
+          "id": "summary",
+          "visible": true
+        },
+        {
+          "id": "skills",
+          "visible": true
+        },
+        {
+          "id": "experience",
+          "visible": true
+        },
+        {
+          "id": "projects",
+          "visible": true
+        },
+        {
+          "id": "research",
+          "visible": true
+        },
+        {
+          "id": "education",
+          "visible": true
+        },
+        {
+          "id": "certifications",
+          "visible": true
+        },
+        {
+          "id": "achievements",
+          "visible": true
+        },
+        {
+          "id": "contact",
+          "visible": true
+        }
+      ],
+      "h1": "Chirantha K M",
+      "smooth": "smooth",
+      "blobAnimation": "drift",
+      "overflow": false
+    },
+    {
+      "mode": "reduced-motion",
+      "sections": [
+        {
+          "id": "summary",
+          "visible": true
+        },
+        {
+          "id": "skills",
+          "visible": true
+        },
+        {
+          "id": "experience",
+          "visible": true
+        },
+        {
+          "id": "projects",
+          "visible": true
+        },
+        {
+          "id": "research",
+          "visible": true
+        },
+        {
+          "id": "education",
+          "visible": true
+        },
+        {
+          "id": "certifications",
+          "visible": true
+        },
+        {
+          "id": "achievements",
+          "visible": true
+        },
+        {
+          "id": "contact",
+          "visible": true
+        }
+      ],
+      "h1": "Chirantha K M",
+      "smooth": "auto",
+      "blobAnimation": "none",
+      "overflow": false
+    },
+    {
+      "notFoundStatus": 404,
+      "backLink": 1
+    },
+    {
+      "downloadFilename": "Chirantha_K_M_Resume.pdf"
+    },
+    {
+      "sourceHasContent": true,
+      "jsonLd": true
+    }
+  ],
+  "errors": []
+}

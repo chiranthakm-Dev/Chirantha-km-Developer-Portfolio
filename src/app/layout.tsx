@@ -1,78 +1,88 @@
 import type { Metadata } from "next";
-import { Inter, Archivo_Black } from "next/font/google";
+import { Anton, Inter, JetBrains_Mono } from "next/font/google";
+import { content as c } from "@/data/content";
+import Navigation from "@/components/portfolio/navigation";
 import "./globals.css";
-import { config } from "@/data/config";
-
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
-import Script from "next/script";
-import AppOverlays from "@/components/app-overlays";
-import { Providers } from "@/components/providers";
-
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-display",
+});
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+});
 export const metadata: Metadata = {
-  title: config.title,
-  description: config.description.long,
-  keywords: config.keywords,
-  authors: [{ name: config.author }],
+  metadataBase: new URL(c.url),
+  title: c.title,
+  description: c.description,
+  alternates: { canonical: "/" },
+  authors: [{ name: c.name }],
   openGraph: {
-    title: config.title,
-    description: config.description.short,
-    url: config.site,
+    title: c.title,
+    description: c.description,
+    url: c.url,
+    type: "profile",
     images: [
-      {
-        url: config.ogImg,
-        width: 800,
-        height: 600,
-        alt: "Portfolio preview",
-      },
+      { url: "/opengraph-image", width: 1200, height: 630, alt: c.title },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: config.title,
-    description: config.description.short,
-    images: [config.ogImg],
+    title: c.title,
+    description: c.description,
+    images: ["/opengraph-image"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const archivoBlack = Archivo_Black({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-display",
-});
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const person = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: c.name,
+    jobTitle: c.roles[0],
+    email: c.email,
+    telephone: c.phone,
+    url: c.url,
+    sameAs: [c.github, c.linkedin],
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: c.education.organization,
+    },
+    knowsAbout: c.skills.flatMap((g) => g.items),
+  };
   return (
-    <html lang="en" className={[inter.variable, archivoBlack.variable, "font-display"].join(" ")} suppressHydrationWarning>
-      <head>
-        <Script
-          defer
-          src={process.env.UMAMI_DOMAIN}
-          data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
-        {/* <Analytics /> */}
-      </head>
-      <body>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <AppOverlays />
-        </Providers>
+    <html
+      lang="en"
+      className={`${inter.variable} ${anton.variable} ${mono.variable}`}
+    >
+      <body id="top">
+        <a className="skip-link" href="#main-content">
+          {c.labels.skip}
+        </a>
+        <div className="ambient" aria-hidden="true">
+          <div />
+          <div />
+        </div>
+        <Navigation />
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(person).replace(/</g, "\\u003c"),
+          }}
+        />
       </body>
     </html>
   );

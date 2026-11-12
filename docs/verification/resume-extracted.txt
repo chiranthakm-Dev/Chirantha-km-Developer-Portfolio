@@ -1,0 +1,131 @@
+Chirantha K M
+Python Engineer | Applied AI/ML | Quantitative Research
+Bengaluru, India | +91 83102 28282 | chirantha.km15@gmail.com
+https://github.com/chirantha-km
+https://www.linkedin.com/in/chirantha-km
+https://chirantha-km-developer-portfolio.vercel.app
+
+
+SUMMARY
+Python software and applied AI/ML engineer experienced in building production data
+pipelines, backend APIs, full-stack applications, and statistical ML solutions. My work
+spans financial-data reconciliation, end-to-end technical delivery, and ongoing research
+into LLM output validation and hallucination detection.
+
+
+SKILLS
+Programming & Data: Python, SQL, Go, C++, Pandas, NumPy, Data Structures & Algorithms,
+Object-Oriented Programming
+Backend & Platforms: FastAPI, REST APIs, Kafka, Redis, WebSockets, JWT / RBAC, PostgreSQL,
+MongoDB
+Applied AI & Research: Scikit-learn, XGBoost, Statistical Analysis, Anomaly Detection,
+Feature Engineering, Predictive Modelling, LLM Reliability Research
+Infrastructure & Quality: Docker, Kubernetes, GitHub Actions, pytest, Prometheus, Grafana,
+GCP Cloud Run, AWS (working knowledge), Linux
+
+
+EXPERIENCE
+Quant Analyst & Tech
+Reverb Inc. | Remote | May 2026 - Sep 2026
+- Translated quantitative research questions into reproducible data workflows, experiments,
+and Python-based solutions; refined approaches using results and stakeholder feedback.
+- Owned data preparation, quantitative analysis, debugging, and technical delivery from
+problem definition through implementation in collaboration with stakeholders.
+
+
+Full-Stack Engineer & Technical Lead (Intern)
+MSR Solutions | Bengaluru, India | Dec 2025 - May 2026
+- Independently shipped production web, mobile, admin, and CRM applications, designing
+backend APIs, data integrations, and maintainable services.
+- Developed an ML-powered estimation feature, translating quantitative cost and timeline
+models into an end-user product.
+- Led architecture, implementation, testing, and deployments through rapid iterations with
+technical and business stakeholders.
+
+
+Backend / Data Engineer Intern
+SuperBuilt AI | Remote | Feb 2025 - May 2025
+- Developed Python and SQL financial-data pipelines processing 50,000+ records daily;
+implemented reconciliation, validation, idempotent retries, and dead-letter handling to
+achieve 99.4% reliability.
+- Improved PostgreSQL reconciliation queries from 8s to 900ms using composite indexes,
+partitioning, and schema optimization.
+- Implemented statistical anomaly detection with Z-score and Isolation Forest; exposed
+Prometheus metrics and investigated data-quality failures.
+Data Science Intern
+YBI Foundation | Bengaluru, India | Jan 2024 - Feb 2024
+- Built a reproducible Python ML pipeline for ingestion, feature engineering, training, and
+evaluation, with 78% pytest coverage.
+- Reduced debugging MTTR from 4 hours to under 45 minutes using structured logging and
+Grafana dashboards.
+
+
+
+
+PROJECTS
+Real-Time Statistical Anomaly Detection Engine
+- Processed 500 transactions/sec through Kafka, combining Z-score, IQR, and Isolation Forest
+with PostgreSQL persistence, API endpoints, and latency monitoring.
+Stack: Python, FastAPI, Kafka, Scikit-learn, PostgreSQL, Prometheus, Grafana, Docker
+Production REST API - Task & Team Management
+- Achieved sub-100ms p95 latency under 500 concurrent users and 84% pytest coverage with
+JWT/RBAC, Redis rate limiting, and automated testing.
+Stack: FastAPI, PostgreSQL, Redis, JWT, Docker, pytest, GitHub Actions
+Real-Time Event Streaming & Notification Service
+- Handled 1,000+ events/min with Kafka consumer groups, dead-letter routing, idempotency,
+Redis, and consumer-lag monitoring.
+Stack: Python, FastAPI, Kafka, WebSockets, PostgreSQL, Redis, Prometheus
+Ovia - Predictive Modelling Research
+- Developed a reproducible XGBoost workflow for feature processing, evaluation, and FastAPI
+inference with PostgreSQL; research accepted for IEEE NELEX 2026.
+Stack: Python, XGBoost, FastAPI, PostgreSQL, Docker
+
+
+RESEARCH & PUBLICATIONS
+Output Validation & Hallucination Detection for LLM Inference Systems
+2025 - present | Ongoing research
+- Research on LLM inference output validation, hallucination detection, model failure
+analysis, and reliability evaluation.
+Ovia: XGBoost-Based Predictive Modelling for Women's Wellness Tracking
+2026 | IEEE NELEX 2026 | Conference accepted
+- Predictive modelling research using XGBoost, feature processing, evaluation, and API
+inference.
+Fast Fashion's Impact on Youth & Sustainability
+2024 | Asia Journal of Ethics and Sustainability | Journal publication
+
+
+EDUCATION
+B.Tech - Computer Science & Business Systems
+Jain (Deemed-to-be University) | Bengaluru, India | 2022 - 2026
+- GPA: 8.3/10
+- Coursework: Data Structures & Algorithms, Operating Systems, DBMS, Operations Research,
+Business Analytics, Computer Networks.
+
+
+CERTIFICATIONS
+2024 | Meta Backend Developer Professional Certificate | Meta / Coursera
+2024 | Apache Kafka for Beginners - Developer Certificate | Confluent
+2024 | Docker for Developers | Docker Inc.
+2024 | GitHub Actions CI/CD | GitHub Skills
+2023 | Google Cloud Fundamentals | Google Cloud / Coursera
+2023 | Linux Command Line Essentials (NDG) | Cisco NetAcad
+2023 | Machine Learning with Python | IBM SkillsBuild
+
+
+ACHIEVEMENTS & LEADERSHIP
+2025 | Top 5 Finalist - Indegene Hackathon: 2,000+ teams; real-time anomaly detection
+backend.
+2024 | Open-Source Contributor: Backtrader & FastAPI-pagination.
+2023 | TCS IT Quiz - National Level Representative: Karnataka state selection.
+2023 | Founder & Technical Lead - Echo Club: FinTech-focused student community, Jain
+University; 2023-present.
+2022 | Founding Member & Tech/PR Lead - Tech Council SCSE: Led technical and PR operations
+for three years.
+2022 | Technical Lead - Cultural Club: Managed AV infrastructure for large-scale campus
+events.
+
+
+CONTACT
+chirantha.km15@gmail.com | +91 83102 28282
+English | Kannada | Hindi
+
