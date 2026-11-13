@@ -351,7 +351,6 @@ export function Footer() {
     <footer className="footer">
       <a className="wordmark" href="#top">
         {c.shortName}
-        <span aria-hidden="true">.</span>
       </a>
       <p>
         © {c.year} {c.labels.copyright}

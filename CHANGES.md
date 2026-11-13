@@ -53,3 +53,5 @@ Unrelated pre-existing working-tree changes and asset deletions are excluded fro
 - Production build passed without warnings. Verified at 360/768/1440px with no horizontal overflow or browser errors. All requested copy, stat meanings, and attribution appear with JavaScript disabled; reduced motion and navigation checks pass.
 - Latest local mobile Lighthouse: **100 Performance, 100 Accessibility, 100 Best Practices, 100 SEO**. Updated report and browser results are saved under `docs/verification`.
 - Local review only; nothing pushed or deployed.
+
+- Branding refinement: replaced CKM initial marks in the header/footer with the plain text “chiranth km”, removed the decorative dot, and adjusted mobile header spacing.

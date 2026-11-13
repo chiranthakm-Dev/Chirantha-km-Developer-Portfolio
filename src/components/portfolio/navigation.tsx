@@ -36,7 +36,6 @@ export default function Navigation() {
         aria-label={`${c.shortName} — ${c.labels.top}`}
       >
         {c.shortName}
-        <span aria-hidden="true">.</span>
       </a>
       <button
         id="menu-toggle"

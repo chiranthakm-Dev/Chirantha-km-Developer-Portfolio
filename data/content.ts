@@ -11,7 +11,7 @@ export type Entry = {
 };
 export const content = {
   name: "Chirantha K M",
-  shortName: "CKM",
+  shortName: "chiranth km",
   year: "2026",
   location: "Bengaluru, India",
   url: "https://chirantha-km-developer-portfolio.vercel.app",

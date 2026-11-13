@@ -1616,3 +1616,7 @@ h1 {
     min-height: 920px;
   }
 }
+
+/* Plain name replaces the condensed initial mark. */
+.wordmark { font-family: var(--font-body), sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -.04em; white-space: nowrap; }
+@media(max-width:767px) { .wordmark { font-size: 16px; } .site-header { padding-inline: 16px; gap: 10px; } .header-actions { gap: 8px; } .footer { gap: 12px; } }
