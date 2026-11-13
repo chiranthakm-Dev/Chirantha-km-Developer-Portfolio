@@ -33,3 +33,12 @@ Rebuilt the portfolio as one statically generated, recruiter-readable page using
 - Review the branch preview before any production merge. No production release is authorized or performed.
 
 Unrelated pre-existing working-tree changes and asset deletions are excluded from the redesign commit.
+
+## Portrait update — 13 Nov 2026
+
+- Added the supplied `public/assets/PROFILE PICTURE.png` near the beginning: a cream photo frame alongside the name card on desktop, stacked above it on mobile. The original image is unchanged.
+- The image path, alt text and caption are defined in `data/content.ts`. Uses `next/image` with explicit responsive sizes and priority loading; Sharp handles server-side image optimization. A measured 384px WebP response is about 13 kB, compared with the 2 MB source.
+- Checked 360px, 768px and 1440px: image loads, name stays inside its card, no horizontal overflow, no browser errors.
+- Production build passed without warnings. Latest local mobile Lighthouse: **Performance 96, Accessibility 100, Best Practices 100, SEO 100**; updated report saved in `docs/verification/lighthouse.html`. Earlier 100 performance result above predates the portrait.
+- Portrait is omitted from print layouts; the separate ATS resume remains text-only.
+- Local review only; no remote push or deployment.

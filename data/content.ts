@@ -24,6 +24,11 @@ export const content = {
   description:
     "Python engineer working across financial data platforms, backend APIs, applied AI/ML and quantitative research. Explore experience, projects and publications.",
   roles: ["Python Engineer", "Applied AI/ML", "Quantitative Research"],
+  portrait: {
+    src: "/assets/PROFILE PICTURE.png",
+    alt: "Portrait of Chirantha K M wearing a forest-green suit",
+    caption: "Chirantha K M",
+  },
   hero: {
     eyebrow: "Engineering · Data · Research",
     descriptor: "Python, financial data platforms & applied AI/ML",

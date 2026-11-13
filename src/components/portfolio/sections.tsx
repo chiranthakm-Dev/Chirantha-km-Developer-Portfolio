@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { content as c, type Entry } from "@/data/content";
 import {
   ArrowUpRight,
@@ -65,22 +66,40 @@ export function Hero() {
           {c.location}
         </span>
       </div>
-      <div className="hero-card">
-        <div className="hero-card-top">
-          <span>{c.hero.descriptor}</span>
-          <span aria-hidden="true">↗</span>
+      <div className="hero-stage">
+        <div className="hero-card">
+          <div className="hero-card-top">
+            <span>{c.hero.descriptor}</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <h1 id="hero-name">
+            <span>{c.name.split(" ")[0]}</span>{" "}
+            <span className="name-last">
+              {c.name.split(" ").slice(1).join(" ")}
+            </span>
+          </h1>
+          <div className="hero-card-bottom">
+            <span>{c.name}</span>
+            <span className="hairline" aria-hidden="true" />
+            <span>{c.year}</span>
+          </div>
         </div>
-        <h1 id="hero-name">
-          <span>{c.name.split(" ")[0]}</span>{" "}
-          <span className="name-last">
-            {c.name.split(" ").slice(1).join(" ")}
-          </span>
-        </h1>
-        <div className="hero-card-bottom">
-          <span>{c.name}</span>
-          <span className="hairline" aria-hidden="true" />
-          <span>{c.year}</span>
-        </div>
+        <figure className="hero-portrait">
+          <div className="portrait-image">
+            <Image
+              src={c.portrait.src}
+              alt={c.portrait.alt}
+              fill
+              sizes="(max-width: 767px) 150px, (max-width: 1100px) 170px, 210px"
+              priority
+              quality={85}
+            />
+          </div>
+          <figcaption>
+            <span>{c.portrait.caption}</span>
+            <span aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
       </div>
       <p className="hero-roles">
         {c.roles.map((role, i) => (

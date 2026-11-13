@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "overflow": false,
+      "portraitLoaded": true,
+      "alt": "Portrait of Chirantha K M wearing a forest-green suit",
+      "optimizedSrc": "http://127.0.0.1:3000/_next/image?url=%2Fassets%2FPROFILE%20PICTURE.png&w=256&q=85",
+      "headingFits": true,
+      "name": "Chirantha K M"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "portraitLoaded": true,
+      "alt": "Portrait of Chirantha K M wearing a forest-green suit",
+      "optimizedSrc": "http://127.0.0.1:3000/_next/image?url=%2Fassets%2FPROFILE%20PICTURE.png&w=256&q=85",
+      "headingFits": true,
+      "name": "Chirantha K M"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "portraitLoaded": true,
+      "alt": "Portrait of Chirantha K M wearing a forest-green suit",
+      "optimizedSrc": "http://127.0.0.1:3000/_next/image?url=%2Fassets%2FPROFILE%20PICTURE.png&w=256&q=85",
+      "headingFits": true,
+      "name": "Chirantha K M"
+    }
+  ],
+  "errors": []
+}
