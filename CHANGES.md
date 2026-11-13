@@ -42,3 +42,14 @@ Unrelated pre-existing working-tree changes and asset deletions are excluded fro
 - Production build passed without warnings. Latest local mobile Lighthouse: **Performance 96, Accessibility 100, Best Practices 100, SEO 100**; updated report saved in `docs/verification/lighthouse.html`. Earlier 100 performance result above predates the portrait.
 - Portrait is omitted from print layouts; the separate ATS resume remains text-only.
 - Local review only; no remote push or deployment.
+
+## Plain-English content update — 13 Nov 2026
+
+- Applied the supplied hero role line and subline, three Summary paragraphs, and contextual explanations beneath all three stat cards. Each stat names SuperBuilt AI, the exact Backend / Data Engineer Intern title, and Feb to May 2025.
+- Added the optional Build / Check / Analyse strip as semantic HTML lists.
+- Skills now contain five groups, including the supplied Quantitative Methods items. Statistical Analysis appears only in that group. All copy remains in `data/content.ts`.
+- Preserved seven existing certifications and verified coursework. Unconfirmed business courses, QuantConnect courses, and additional quant tools remain authoring TODOs, not displayed claims.
+- Updated the PDF generator for paragraph arrays and regenerated the three-page resume. `pdftotext` has no non-ASCII extraction characters. Marked the resume as binary in Git attributes.
+- Production build passed without warnings. Verified at 360/768/1440px with no horizontal overflow or browser errors. All requested copy, stat meanings, and attribution appear with JavaScript disabled; reduced motion and navigation checks pass.
+- Latest local mobile Lighthouse: **100 Performance, 100 Accessibility, 100 Best Practices, 100 SEO**. Updated report and browser results are saved under `docs/verification`.
+- Local review only; nothing pushed or deployed.

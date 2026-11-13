@@ -23,7 +23,7 @@ export const content = {
   title: "Chirantha K M — Python Engineer & Quantitative Research",
   description:
     "Python engineer working across financial data platforms, backend APIs, applied AI/ML and quantitative research. Explore experience, projects and publications.",
-  roles: ["Python Engineer", "Applied AI/ML", "Quantitative Research"],
+  roles: ["Python Engineer", "Financial Data Platforms", "Applied AI/ML"],
   portrait: {
     src: "/assets/PROFILE PICTURE.png",
     alt: "Portrait of Chirantha K M wearing a forest-green suit",
@@ -31,7 +31,9 @@ export const content = {
   },
   hero: {
     eyebrow: "Engineering · Data · Research",
-    descriptor: "Python, financial data platforms & applied AI/ML",
+    descriptor: "Python Engineer | Financial Data Platforms | Applied AI/ML",
+    subline:
+      "I build the backend systems that move, check, and analyse financial data, and I research how to make AI outputs more reliable.",
     note: "Bengaluru, India",
     primary: "Download Resume",
     secondary: "Explore my work",
@@ -88,25 +90,65 @@ export const content = {
     },
     { id: "contact", title: "Contact", note: "Start a conversation" },
   ],
-  summary:
-    "Python software and applied AI/ML engineer experienced in building production data pipelines, backend APIs, full-stack applications, and statistical ML solutions. My work spans financial-data reconciliation, end-to-end technical delivery, and ongoing research into LLM output validation and hallucination detection.",
+  summary: [
+    "I’m a Python engineer who builds software that handles financial data accurately and at scale. That means pipelines that collect and clean thousands of records a day, APIs that other apps rely on, and machine-learning models that spot unusual patterns.",
+    "At SuperBuilt AI, I built pipelines that process 50,000+ financial records daily with 99.4% reliability, and made the database queries that check those records about 10× faster. I also research how to detect when large language models give wrong or made-up answers.",
+    "Based in Bengaluru. I work in English, Kannada, and Hindi.",
+  ],
   proof: [
     {
       value: "50,000+",
       label: "Financial records processed daily",
-      context: "SuperBuilt AI",
+      meaning: "The pipelines I built handle real volume, not demo data.",
+      context:
+        "SuperBuilt AI · Backend / Data Engineer Intern · Feb to May 2025.",
     },
     {
       value: "99.4%",
-      label: "Financial-data pipeline reliability",
-      context: "SuperBuilt AI",
+      label: "Pipeline reliability",
+      meaning:
+        "Records were validated, retried on failure, and failed ones routed aside instead of being lost.",
+      context:
+        "SuperBuilt AI · Backend / Data Engineer Intern · Feb to May 2025.",
     },
     {
       value: "8s → 900ms",
-      label: "Reconciliation query latency",
-      context: "SuperBuilt AI",
+      label: "Reconciliation query speed (~10× faster)",
+      meaning:
+        "Reconciliation means checking that records from different sources agree. I made that check fast using indexing and partitioning.",
+      context:
+        "SuperBuilt AI · Backend / Data Engineer Intern · Feb to May 2025.",
     },
   ],
+  howWork: {
+    title: "How I work",
+    steps: [
+      {
+        title: "Build",
+        items: ["Python", "FastAPI", "PostgreSQL", "Docker", "Kafka"],
+      },
+      {
+        title: "Check",
+        items: [
+          "pytest",
+          "validation rules",
+          "Prometheus and Grafana monitoring",
+        ],
+      },
+      {
+        title: "Analyse",
+        items: [
+          "anomaly detection (Z-score, Isolation Forest)",
+          "XGBoost",
+          "LLM output validation research",
+        ],
+      },
+    ],
+  },
+  // Render only the skills and certifications listed here. TODOs are authoring notes, not credentials.
+  // TODO: Confirm any additional tools (Monte Carlo, risk metrics, portfolio optimization, QuantConnect / LEAN) before adding them.
+  // TODO: Add QuantConnect only with a verified exact course title/year and proof; use in-progress only after confirmation.
+  // TODO: Verify exact transcript titles for Financial Accounting, Financial Management, Marketing Research, and Principles of Management before adding coursework.
   skills: [
     {
       title: "Programming & Data",
@@ -139,11 +181,21 @@ export const content = {
       items: [
         "Scikit-learn",
         "XGBoost",
-        "Statistical Analysis",
         "Anomaly Detection",
         "Feature Engineering",
         "Predictive Modelling",
         "LLM Reliability Research",
+      ],
+    },
+    {
+      title: "Quantitative Methods",
+      items: [
+        "Statistical Analysis",
+        "Time-Series Data",
+        "Backtesting Frameworks (Backtrader contributor)",
+        "Quantitative Research Workflows",
+        "Financial Data Reconciliation",
+        "Operations Research",
       ],
     },
     {

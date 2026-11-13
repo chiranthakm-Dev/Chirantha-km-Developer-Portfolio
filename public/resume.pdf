@@ -15,130 +15,136 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 4057 >>
+<< /Length 4110 >>
 stream
 BT /F2 20 Tf 54 788.00 Td (Chirantha K M) Tj ET
-BT /F2 10 Tf 54 755.00 Td (Python Engineer | Applied AI/ML | Quantitative Research) Tj ET
+BT /F2 10 Tf 54 755.00 Td (Python Engineer | Financial Data Platforms | Applied AI/ML) Tj ET
 BT /F1 10 Tf 54 741.50 Td (Bengaluru, India | +91 83102 28282 | chirantha.km15@gmail.com) Tj ET
 BT /F1 10 Tf 54 728.00 Td (https://github.com/chirantha-km) Tj ET
 BT /F1 10 Tf 54 714.50 Td (https://www.linkedin.com/in/chirantha-km) Tj ET
 BT /F1 10 Tf 54 701.00 Td (https://chirantha-km-developer-portfolio.vercel.app) Tj ET
 BT /F2 11 Tf 54 666.00 Td (SUMMARY) Tj ET
-BT /F1 10 Tf 54 645.25 Td (Python software and applied AI/ML engineer experienced in building production data) Tj ET
-BT /F1 10 Tf 54 631.75 Td (pipelines, backend APIs, full-stack applications, and statistical ML solutions. My work) Tj ET
-BT /F1 10 Tf 54 618.25 Td (spans financial-data reconciliation, end-to-end technical delivery, and ongoing research) Tj ET
-BT /F1 10 Tf 54 604.75 Td (into LLM output validation and hallucination detection.) Tj ET
-BT /F2 11 Tf 54 569.75 Td (SKILLS) Tj ET
-BT /F1 10 Tf 54 549.00 Td (Programming & Data: Python, SQL, Go, C++, Pandas, NumPy, Data Structures & Algorithms,) Tj ET
-BT /F1 10 Tf 54 535.50 Td (Object-Oriented Programming) Tj ET
-BT /F1 10 Tf 54 522.00 Td (Backend & Platforms: FastAPI, REST APIs, Kafka, Redis, WebSockets, JWT / RBAC, PostgreSQL,) Tj ET
-BT /F1 10 Tf 54 508.50 Td (MongoDB) Tj ET
-BT /F1 10 Tf 54 495.00 Td (Applied AI & Research: Scikit-learn, XGBoost, Statistical Analysis, Anomaly Detection,) Tj ET
-BT /F1 10 Tf 54 481.50 Td (Feature Engineering, Predictive Modelling, LLM Reliability Research) Tj ET
-BT /F1 10 Tf 54 468.00 Td (Infrastructure & Quality: Docker, Kubernetes, GitHub Actions, pytest, Prometheus, Grafana,) Tj ET
-BT /F1 10 Tf 54 454.50 Td (GCP Cloud Run, AWS \(working knowledge\), Linux) Tj ET
-BT /F2 11 Tf 54 419.50 Td (EXPERIENCE) Tj ET
-BT /F2 11 Tf 54 398.75 Td (Quant Analyst & Tech) Tj ET
-BT /F1 10 Tf 54 384.00 Td (Reverb Inc. | Remote | May 2026 - Sep 2026) Tj ET
-BT /F1 10 Tf 54 370.50 Td (- Translated quantitative research questions into reproducible data workflows, experiments,) Tj ET
-BT /F1 10 Tf 54 357.00 Td (and Python-based solutions; refined approaches using results and stakeholder feedback.) Tj ET
-BT /F1 10 Tf 54 343.50 Td (- Owned data preparation, quantitative analysis, debugging, and technical delivery from) Tj ET
-BT /F1 10 Tf 54 330.00 Td (problem definition through implementation in collaboration with stakeholders.) Tj ET
-BT /F2 11 Tf 54 299.00 Td (Full-Stack Engineer & Technical Lead \(Intern\)) Tj ET
-BT /F1 10 Tf 54 284.25 Td (MSR Solutions | Bengaluru, India | Dec 2025 - May 2026) Tj ET
-BT /F1 10 Tf 54 270.75 Td (- Independently shipped production web, mobile, admin, and CRM applications, designing) Tj ET
-BT /F1 10 Tf 54 257.25 Td (backend APIs, data integrations, and maintainable services.) Tj ET
-BT /F1 10 Tf 54 243.75 Td (- Developed an ML-powered estimation feature, translating quantitative cost and timeline) Tj ET
-BT /F1 10 Tf 54 230.25 Td (models into an end-user product.) Tj ET
-BT /F1 10 Tf 54 216.75 Td (- Led architecture, implementation, testing, and deployments through rapid iterations with) Tj ET
-BT /F1 10 Tf 54 203.25 Td (technical and business stakeholders.) Tj ET
-BT /F2 11 Tf 54 172.25 Td (Backend / Data Engineer Intern) Tj ET
-BT /F1 10 Tf 54 157.50 Td (SuperBuilt AI | Remote | Feb 2025 - May 2025) Tj ET
-BT /F1 10 Tf 54 144.00 Td (- Developed Python and SQL financial-data pipelines processing 50,000+ records daily;) Tj ET
-BT /F1 10 Tf 54 130.50 Td (implemented reconciliation, validation, idempotent retries, and dead-letter handling to) Tj ET
-BT /F1 10 Tf 54 117.00 Td (achieve 99.4% reliability.) Tj ET
-BT /F1 10 Tf 54 103.50 Td (- Improved PostgreSQL reconciliation queries from 8s to 900ms using composite indexes,) Tj ET
-BT /F1 10 Tf 54 90.00 Td (partitioning, and schema optimization.) Tj ET
-BT /F1 10 Tf 54 76.50 Td (- Implemented statistical anomaly detection with Z-score and Isolation Forest; exposed) Tj ET
-BT /F1 10 Tf 54 63.00 Td (Prometheus metrics and investigated data-quality failures.) Tj ET
+BT /F1 10 Tf 54 645.25 Td (I'm a Python engineer who builds software that handles financial data accurately and at) Tj ET
+BT /F1 10 Tf 54 631.75 Td (scale. That means pipelines that collect and clean thousands of records a day, APIs that) Tj ET
+BT /F1 10 Tf 54 618.25 Td (other apps rely on, and machine-learning models that spot unusual patterns.) Tj ET
+BT /F1 10 Tf 54 604.75 Td (At SuperBuilt AI, I built pipelines that process 50,000+ financial records daily with 99.4%) Tj ET
+BT /F1 10 Tf 54 591.25 Td (reliability, and made the database queries that check those records about 10x faster. I also) Tj ET
+BT /F1 10 Tf 54 577.75 Td (research how to detect when large language models give wrong or made-up answers.) Tj ET
+BT /F1 10 Tf 54 564.25 Td (Based in Bengaluru. I work in English, Kannada, and Hindi.) Tj ET
+BT /F2 11 Tf 54 529.25 Td (SKILLS) Tj ET
+BT /F1 10 Tf 54 508.50 Td (Programming & Data: Python, SQL, Go, C++, Pandas, NumPy, Data Structures & Algorithms,) Tj ET
+BT /F1 10 Tf 54 495.00 Td (Object-Oriented Programming) Tj ET
+BT /F1 10 Tf 54 481.50 Td (Backend & Platforms: FastAPI, REST APIs, Kafka, Redis, WebSockets, JWT / RBAC, PostgreSQL,) Tj ET
+BT /F1 10 Tf 54 468.00 Td (MongoDB) Tj ET
+BT /F1 10 Tf 54 454.50 Td (Applied AI & Research: Scikit-learn, XGBoost, Anomaly Detection, Feature Engineering,) Tj ET
+BT /F1 10 Tf 54 441.00 Td (Predictive Modelling, LLM Reliability Research) Tj ET
+BT /F1 10 Tf 54 427.50 Td (Quantitative Methods: Statistical Analysis, Time-Series Data, Backtesting Frameworks) Tj ET
+BT /F1 10 Tf 54 414.00 Td (\(Backtrader contributor\), Quantitative Research Workflows, Financial Data Reconciliation,) Tj ET
+BT /F1 10 Tf 54 400.50 Td (Operations Research) Tj ET
+BT /F1 10 Tf 54 387.00 Td (Infrastructure & Quality: Docker, Kubernetes, GitHub Actions, pytest, Prometheus, Grafana,) Tj ET
+BT /F1 10 Tf 54 373.50 Td (GCP Cloud Run, AWS \(working knowledge\), Linux) Tj ET
+BT /F2 11 Tf 54 338.50 Td (EXPERIENCE) Tj ET
+BT /F2 11 Tf 54 317.75 Td (Quant Analyst & Tech) Tj ET
+BT /F1 10 Tf 54 303.00 Td (Reverb Inc. | Remote | May 2026 - Sep 2026) Tj ET
+BT /F1 10 Tf 54 289.50 Td (- Translated quantitative research questions into reproducible data workflows, experiments,) Tj ET
+BT /F1 10 Tf 54 276.00 Td (and Python-based solutions; refined approaches using results and stakeholder feedback.) Tj ET
+BT /F1 10 Tf 54 262.50 Td (- Owned data preparation, quantitative analysis, debugging, and technical delivery from) Tj ET
+BT /F1 10 Tf 54 249.00 Td (problem definition through implementation in collaboration with stakeholders.) Tj ET
+BT /F2 11 Tf 54 218.00 Td (Full-Stack Engineer & Technical Lead \(Intern\)) Tj ET
+BT /F1 10 Tf 54 203.25 Td (MSR Solutions | Bengaluru, India | Dec 2025 - May 2026) Tj ET
+BT /F1 10 Tf 54 189.75 Td (- Independently shipped production web, mobile, admin, and CRM applications, designing) Tj ET
+BT /F1 10 Tf 54 176.25 Td (backend APIs, data integrations, and maintainable services.) Tj ET
+BT /F1 10 Tf 54 162.75 Td (- Developed an ML-powered estimation feature, translating quantitative cost and timeline) Tj ET
+BT /F1 10 Tf 54 149.25 Td (models into an end-user product.) Tj ET
+BT /F1 10 Tf 54 135.75 Td (- Led architecture, implementation, testing, and deployments through rapid iterations with) Tj ET
+BT /F1 10 Tf 54 122.25 Td (technical and business stakeholders.) Tj ET
+BT /F2 11 Tf 54 91.25 Td (Backend / Data Engineer Intern) Tj ET
+BT /F1 10 Tf 54 76.50 Td (SuperBuilt AI | Remote | Feb 2025 - May 2025) Tj ET
+BT /F1 10 Tf 54 63.00 Td (- Developed Python and SQL financial-data pipelines processing 50,000+ records daily;) Tj ET
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 3731 >>
+<< /Length 4092 >>
 stream
-BT /F2 11 Tf 54 770.50 Td (Data Science Intern) Tj ET
-BT /F1 10 Tf 54 755.75 Td (YBI Foundation | Bengaluru, India | Jan 2024 - Feb 2024) Tj ET
-BT /F1 10 Tf 54 742.25 Td (- Built a reproducible Python ML pipeline for ingestion, feature engineering, training, and) Tj ET
-BT /F1 10 Tf 54 728.75 Td (evaluation, with 78% pytest coverage.) Tj ET
-BT /F1 10 Tf 54 715.25 Td (- Reduced debugging MTTR from 4 hours to under 45 minutes using structured logging and) Tj ET
-BT /F1 10 Tf 54 701.75 Td (Grafana dashboards.) Tj ET
-BT /F2 11 Tf 54 649.25 Td (PROJECTS) Tj ET
-BT /F2 11 Tf 54 628.50 Td (Real-Time Statistical Anomaly Detection Engine) Tj ET
-BT /F1 10 Tf 54 613.75 Td (- Processed 500 transactions/sec through Kafka, combining Z-score, IQR, and Isolation Forest) Tj ET
-BT /F1 10 Tf 54 600.25 Td (with PostgreSQL persistence, API endpoints, and latency monitoring.) Tj ET
-BT /F1 10 Tf 54 586.75 Td (Stack: Python, FastAPI, Kafka, Scikit-learn, PostgreSQL, Prometheus, Grafana, Docker) Tj ET
-BT /F2 11 Tf 54 573.25 Td (Production REST API - Task & Team Management) Tj ET
-BT /F1 10 Tf 54 558.50 Td (- Achieved sub-100ms p95 latency under 500 concurrent users and 84% pytest coverage with) Tj ET
-BT /F1 10 Tf 54 545.00 Td (JWT/RBAC, Redis rate limiting, and automated testing.) Tj ET
-BT /F1 10 Tf 54 531.50 Td (Stack: FastAPI, PostgreSQL, Redis, JWT, Docker, pytest, GitHub Actions) Tj ET
-BT /F2 11 Tf 54 518.00 Td (Real-Time Event Streaming & Notification Service) Tj ET
-BT /F1 10 Tf 54 503.25 Td (- Handled 1,000+ events/min with Kafka consumer groups, dead-letter routing, idempotency,) Tj ET
-BT /F1 10 Tf 54 489.75 Td (Redis, and consumer-lag monitoring.) Tj ET
-BT /F1 10 Tf 54 476.25 Td (Stack: Python, FastAPI, Kafka, WebSockets, PostgreSQL, Redis, Prometheus) Tj ET
-BT /F2 11 Tf 54 462.75 Td (Ovia - Predictive Modelling Research) Tj ET
-BT /F1 10 Tf 54 448.00 Td (- Developed a reproducible XGBoost workflow for feature processing, evaluation, and FastAPI) Tj ET
-BT /F1 10 Tf 54 434.50 Td (inference with PostgreSQL; research accepted for IEEE NELEX 2026.) Tj ET
-BT /F1 10 Tf 54 421.00 Td (Stack: Python, XGBoost, FastAPI, PostgreSQL, Docker) Tj ET
-BT /F2 11 Tf 54 386.00 Td (RESEARCH & PUBLICATIONS) Tj ET
-BT /F2 11 Tf 54 365.25 Td (Output Validation & Hallucination Detection for LLM Inference Systems) Tj ET
-BT /F1 10 Tf 54 350.50 Td (2025 - present | Ongoing research) Tj ET
-BT /F1 10 Tf 54 337.00 Td (- Research on LLM inference output validation, hallucination detection, model failure) Tj ET
-BT /F1 10 Tf 54 323.50 Td (analysis, and reliability evaluation.) Tj ET
-BT /F2 11 Tf 54 310.00 Td (Ovia: XGBoost-Based Predictive Modelling for Women's Wellness Tracking) Tj ET
-BT /F1 10 Tf 54 295.25 Td (2026 | IEEE NELEX 2026 | Conference accepted) Tj ET
-BT /F1 10 Tf 54 281.75 Td (- Predictive modelling research using XGBoost, feature processing, evaluation, and API) Tj ET
-BT /F1 10 Tf 54 268.25 Td (inference.) Tj ET
-BT /F2 11 Tf 54 254.75 Td (Fast Fashion's Impact on Youth & Sustainability) Tj ET
-BT /F1 10 Tf 54 240.00 Td (2024 | Asia Journal of Ethics and Sustainability | Journal publication) Tj ET
-BT /F2 11 Tf 54 205.00 Td (EDUCATION) Tj ET
-BT /F2 11 Tf 54 184.25 Td (B.Tech - Computer Science & Business Systems) Tj ET
-BT /F1 10 Tf 54 169.50 Td (Jain \(Deemed-to-be University\) | Bengaluru, India | 2022 - 2026) Tj ET
-BT /F1 10 Tf 54 156.00 Td (- GPA: 8.3/10) Tj ET
-BT /F1 10 Tf 54 142.50 Td (- Coursework: Data Structures & Algorithms, Operating Systems, DBMS, Operations Research,) Tj ET
-BT /F1 10 Tf 54 129.00 Td (Business Analytics, Computer Networks.) Tj ET
-BT /F2 11 Tf 54 94.00 Td (CERTIFICATIONS) Tj ET
-BT /F1 10 Tf 54 73.25 Td (2024 | Meta Backend Developer Professional Certificate | Meta / Coursera) Tj ET
+BT /F1 10 Tf 54 788.00 Td (implemented reconciliation, validation, idempotent retries, and dead-letter handling to) Tj ET
+BT /F1 10 Tf 54 774.50 Td (achieve 99.4% reliability.) Tj ET
+BT /F1 10 Tf 54 761.00 Td (- Improved PostgreSQL reconciliation queries from 8s to 900ms using composite indexes,) Tj ET
+BT /F1 10 Tf 54 747.50 Td (partitioning, and schema optimization.) Tj ET
+BT /F1 10 Tf 54 734.00 Td (- Implemented statistical anomaly detection with Z-score and Isolation Forest; exposed) Tj ET
+BT /F1 10 Tf 54 720.50 Td (Prometheus metrics and investigated data-quality failures.) Tj ET
+BT /F2 11 Tf 54 689.50 Td (Data Science Intern) Tj ET
+BT /F1 10 Tf 54 674.75 Td (YBI Foundation | Bengaluru, India | Jan 2024 - Feb 2024) Tj ET
+BT /F1 10 Tf 54 661.25 Td (- Built a reproducible Python ML pipeline for ingestion, feature engineering, training, and) Tj ET
+BT /F1 10 Tf 54 647.75 Td (evaluation, with 78% pytest coverage.) Tj ET
+BT /F1 10 Tf 54 634.25 Td (- Reduced debugging MTTR from 4 hours to under 45 minutes using structured logging and) Tj ET
+BT /F1 10 Tf 54 620.75 Td (Grafana dashboards.) Tj ET
+BT /F2 11 Tf 54 568.25 Td (PROJECTS) Tj ET
+BT /F2 11 Tf 54 547.50 Td (Real-Time Statistical Anomaly Detection Engine) Tj ET
+BT /F1 10 Tf 54 532.75 Td (- Processed 500 transactions/sec through Kafka, combining Z-score, IQR, and Isolation Forest) Tj ET
+BT /F1 10 Tf 54 519.25 Td (with PostgreSQL persistence, API endpoints, and latency monitoring.) Tj ET
+BT /F1 10 Tf 54 505.75 Td (Stack: Python, FastAPI, Kafka, Scikit-learn, PostgreSQL, Prometheus, Grafana, Docker) Tj ET
+BT /F2 11 Tf 54 492.25 Td (Production REST API - Task & Team Management) Tj ET
+BT /F1 10 Tf 54 477.50 Td (- Achieved sub-100ms p95 latency under 500 concurrent users and 84% pytest coverage with) Tj ET
+BT /F1 10 Tf 54 464.00 Td (JWT/RBAC, Redis rate limiting, and automated testing.) Tj ET
+BT /F1 10 Tf 54 450.50 Td (Stack: FastAPI, PostgreSQL, Redis, JWT, Docker, pytest, GitHub Actions) Tj ET
+BT /F2 11 Tf 54 437.00 Td (Real-Time Event Streaming & Notification Service) Tj ET
+BT /F1 10 Tf 54 422.25 Td (- Handled 1,000+ events/min with Kafka consumer groups, dead-letter routing, idempotency,) Tj ET
+BT /F1 10 Tf 54 408.75 Td (Redis, and consumer-lag monitoring.) Tj ET
+BT /F1 10 Tf 54 395.25 Td (Stack: Python, FastAPI, Kafka, WebSockets, PostgreSQL, Redis, Prometheus) Tj ET
+BT /F2 11 Tf 54 381.75 Td (Ovia - Predictive Modelling Research) Tj ET
+BT /F1 10 Tf 54 367.00 Td (- Developed a reproducible XGBoost workflow for feature processing, evaluation, and FastAPI) Tj ET
+BT /F1 10 Tf 54 353.50 Td (inference with PostgreSQL; research accepted for IEEE NELEX 2026.) Tj ET
+BT /F1 10 Tf 54 340.00 Td (Stack: Python, XGBoost, FastAPI, PostgreSQL, Docker) Tj ET
+BT /F2 11 Tf 54 305.00 Td (RESEARCH & PUBLICATIONS) Tj ET
+BT /F2 11 Tf 54 284.25 Td (Output Validation & Hallucination Detection for LLM Inference Systems) Tj ET
+BT /F1 10 Tf 54 269.50 Td (2025 - present | Ongoing research) Tj ET
+BT /F1 10 Tf 54 256.00 Td (- Research on LLM inference output validation, hallucination detection, model failure) Tj ET
+BT /F1 10 Tf 54 242.50 Td (analysis, and reliability evaluation.) Tj ET
+BT /F2 11 Tf 54 229.00 Td (Ovia: XGBoost-Based Predictive Modelling for Women's Wellness Tracking) Tj ET
+BT /F1 10 Tf 54 214.25 Td (2026 | IEEE NELEX 2026 | Conference accepted) Tj ET
+BT /F1 10 Tf 54 200.75 Td (- Predictive modelling research using XGBoost, feature processing, evaluation, and API) Tj ET
+BT /F1 10 Tf 54 187.25 Td (inference.) Tj ET
+BT /F2 11 Tf 54 173.75 Td (Fast Fashion's Impact on Youth & Sustainability) Tj ET
+BT /F1 10 Tf 54 159.00 Td (2024 | Asia Journal of Ethics and Sustainability | Journal publication) Tj ET
+BT /F2 11 Tf 54 124.00 Td (EDUCATION) Tj ET
+BT /F2 11 Tf 54 103.25 Td (B.Tech - Computer Science & Business Systems) Tj ET
+BT /F1 10 Tf 54 88.50 Td (Jain \(Deemed-to-be University\) | Bengaluru, India | 2022 - 2026) Tj ET
+BT /F1 10 Tf 54 75.00 Td (- GPA: 8.3/10) Tj ET
+BT /F1 10 Tf 54 61.50 Td (- Coursework: Data Structures & Algorithms, Operating Systems, DBMS, Operations Research,) Tj ET
 endstream
 endobj
 9 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
 endobj
 10 0 obj
-<< /Length 1667 >>
+<< /Length 1896 >>
 stream
-BT /F1 10 Tf 54 788.00 Td (2024 | Apache Kafka for Beginners - Developer Certificate | Confluent) Tj ET
-BT /F1 10 Tf 54 774.50 Td (2024 | Docker for Developers | Docker Inc.) Tj ET
-BT /F1 10 Tf 54 761.00 Td (2024 | GitHub Actions CI/CD | GitHub Skills) Tj ET
-BT /F1 10 Tf 54 747.50 Td (2023 | Google Cloud Fundamentals | Google Cloud / Coursera) Tj ET
-BT /F1 10 Tf 54 734.00 Td (2023 | Linux Command Line Essentials \(NDG\) | Cisco NetAcad) Tj ET
-BT /F1 10 Tf 54 720.50 Td (2023 | Machine Learning with Python | IBM SkillsBuild) Tj ET
-BT /F2 11 Tf 54 685.50 Td (ACHIEVEMENTS & LEADERSHIP) Tj ET
-BT /F1 10 Tf 54 664.75 Td (2025 | Top 5 Finalist - Indegene Hackathon: 2,000+ teams; real-time anomaly detection) Tj ET
-BT /F1 10 Tf 54 651.25 Td (backend.) Tj ET
-BT /F1 10 Tf 54 637.75 Td (2024 | Open-Source Contributor: Backtrader & FastAPI-pagination.) Tj ET
-BT /F1 10 Tf 54 624.25 Td (2023 | TCS IT Quiz - National Level Representative: Karnataka state selection.) Tj ET
-BT /F1 10 Tf 54 610.75 Td (2023 | Founder & Technical Lead - Echo Club: FinTech-focused student community, Jain) Tj ET
-BT /F1 10 Tf 54 597.25 Td (University; 2023-present.) Tj ET
-BT /F1 10 Tf 54 583.75 Td (2022 | Founding Member & Tech/PR Lead - Tech Council SCSE: Led technical and PR operations) Tj ET
-BT /F1 10 Tf 54 570.25 Td (for three years.) Tj ET
-BT /F1 10 Tf 54 556.75 Td (2022 | Technical Lead - Cultural Club: Managed AV infrastructure for large-scale campus) Tj ET
-BT /F1 10 Tf 54 543.25 Td (events.) Tj ET
-BT /F2 11 Tf 54 508.25 Td (CONTACT) Tj ET
-BT /F1 10 Tf 54 487.50 Td (chirantha.km15@gmail.com | +91 83102 28282) Tj ET
-BT /F1 10 Tf 54 474.00 Td (English | Kannada | Hindi) Tj ET
+BT /F1 10 Tf 54 788.00 Td (Business Analytics, Computer Networks.) Tj ET
+BT /F2 11 Tf 54 753.00 Td (CERTIFICATIONS) Tj ET
+BT /F1 10 Tf 54 732.25 Td (2024 | Meta Backend Developer Professional Certificate | Meta / Coursera) Tj ET
+BT /F1 10 Tf 54 718.75 Td (2024 | Apache Kafka for Beginners - Developer Certificate | Confluent) Tj ET
+BT /F1 10 Tf 54 705.25 Td (2024 | Docker for Developers | Docker Inc.) Tj ET
+BT /F1 10 Tf 54 691.75 Td (2024 | GitHub Actions CI/CD | GitHub Skills) Tj ET
+BT /F1 10 Tf 54 678.25 Td (2023 | Google Cloud Fundamentals | Google Cloud / Coursera) Tj ET
+BT /F1 10 Tf 54 664.75 Td (2023 | Linux Command Line Essentials \(NDG\) | Cisco NetAcad) Tj ET
+BT /F1 10 Tf 54 651.25 Td (2023 | Machine Learning with Python | IBM SkillsBuild) Tj ET
+BT /F2 11 Tf 54 616.25 Td (ACHIEVEMENTS & LEADERSHIP) Tj ET
+BT /F1 10 Tf 54 595.50 Td (2025 | Top 5 Finalist - Indegene Hackathon: 2,000+ teams; real-time anomaly detection) Tj ET
+BT /F1 10 Tf 54 582.00 Td (backend.) Tj ET
+BT /F1 10 Tf 54 568.50 Td (2024 | Open-Source Contributor: Backtrader & FastAPI-pagination.) Tj ET
+BT /F1 10 Tf 54 555.00 Td (2023 | TCS IT Quiz - National Level Representative: Karnataka state selection.) Tj ET
+BT /F1 10 Tf 54 541.50 Td (2023 | Founder & Technical Lead - Echo Club: FinTech-focused student community, Jain) Tj ET
+BT /F1 10 Tf 54 528.00 Td (University; 2023-present.) Tj ET
+BT /F1 10 Tf 54 514.50 Td (2022 | Founding Member & Tech/PR Lead - Tech Council SCSE: Led technical and PR operations) Tj ET
+BT /F1 10 Tf 54 501.00 Td (for three years.) Tj ET
+BT /F1 10 Tf 54 487.50 Td (2022 | Technical Lead - Cultural Club: Managed AV infrastructure for large-scale campus) Tj ET
+BT /F1 10 Tf 54 474.00 Td (events.) Tj ET
+BT /F2 11 Tf 54 439.00 Td (CONTACT) Tj ET
+BT /F1 10 Tf 54 418.25 Td (chirantha.km15@gmail.com | +91 83102 28282) Tj ET
+BT /F1 10 Tf 54 404.75 Td (English | Kannada | Hindi) Tj ET
 endstream
 endobj
 xref
@@ -150,12 +156,12 @@ xref
 0000000224 00000 n 
 0000000326 00000 n 
 0000000462 00000 n 
-0000004571 00000 n 
-0000004707 00000 n 
-0000008490 00000 n 
-0000008627 00000 n 
+0000004624 00000 n 
+0000004760 00000 n 
+0000008904 00000 n 
+0000009041 00000 n 
 trailer
 << /Size 11 /Root 1 0 R >>
 startxref
-10347
+10990
 %%EOF

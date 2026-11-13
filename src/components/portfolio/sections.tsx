@@ -101,14 +101,8 @@ export function Hero() {
           </figcaption>
         </figure>
       </div>
-      <p className="hero-roles">
-        {c.roles.map((role, i) => (
-          <span key={role}>
-            {i > 0 && <i className="status-dot" aria-hidden="true" />}
-            {role}
-          </span>
-        ))}
-      </p>
+      <p className="hero-roles">{c.roles.join(" | ")}</p>
+      <p className="hero-subline">{c.hero.subline}</p>
       <div className="specialties">
         <div>
           <Code2 aria-hidden="true" strokeWidth={1} />
@@ -139,21 +133,39 @@ export function PortfolioSections() {
   return (
     <div className="content-shell">
       <Section id="summary">
-        <div className="summary-grid" data-reveal>
-          <p className="summary-copy">{c.summary}</p>
-          <p className="summary-aside">
-            {c.hero.descriptor}
-            <span>{c.languages}</span>
-          </p>
+        <div className="summary-copy" data-reveal>
+          {c.summary.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
         <div className="proof-grid">
           {c.proof.map((p) => (
             <article key={p.label} data-reveal>
               <p className="proof-value">{p.value}</p>
-              <p>{p.label}</p>
-              <span>{p.context}</span>
+              <h3 className="proof-label">{p.label}</h3>
+              <p className="proof-meaning">{p.meaning}</p>
+              <p className="proof-context">{p.context}</p>
             </article>
           ))}
+        </div>
+        <div
+          className="how-work"
+          aria-labelledby="how-work-heading"
+          data-reveal
+        >
+          <h3 id="how-work-heading">{c.howWork.title}</h3>
+          <ul className="how-work-steps">
+            {c.howWork.steps.map((step) => (
+              <li key={step.title}>
+                <strong>{step.title}</strong>
+                <ul>
+                  {step.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
       <Section id="skills">

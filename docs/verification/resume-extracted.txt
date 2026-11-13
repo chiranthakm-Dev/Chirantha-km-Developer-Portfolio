@@ -1,5 +1,5 @@
 Chirantha K M
-Python Engineer | Applied AI/ML | Quantitative Research
+Python Engineer | Financial Data Platforms | Applied AI/ML
 Bengaluru, India | +91 83102 28282 | chirantha.km15@gmail.com
 https://github.com/chirantha-km
 https://www.linkedin.com/in/chirantha-km
@@ -7,10 +7,13 @@ https://chirantha-km-developer-portfolio.vercel.app
 
 
 SUMMARY
-Python software and applied AI/ML engineer experienced in building production data
-pipelines, backend APIs, full-stack applications, and statistical ML solutions. My work
-spans financial-data reconciliation, end-to-end technical delivery, and ongoing research
-into LLM output validation and hallucination detection.
+I'm a Python engineer who builds software that handles financial data accurately and at
+scale. That means pipelines that collect and clean thousands of records a day, APIs that
+other apps rely on, and machine-learning models that spot unusual patterns.
+At SuperBuilt AI, I built pipelines that process 50,000+ financial records daily with 99.4%
+reliability, and made the database queries that check those records about 10x faster. I also
+research how to detect when large language models give wrong or made-up answers.
+Based in Bengaluru. I work in English, Kannada, and Hindi.
 
 
 SKILLS
@@ -18,8 +21,11 @@ Programming & Data: Python, SQL, Go, C++, Pandas, NumPy, Data Structures & Algor
 Object-Oriented Programming
 Backend & Platforms: FastAPI, REST APIs, Kafka, Redis, WebSockets, JWT / RBAC, PostgreSQL,
 MongoDB
-Applied AI & Research: Scikit-learn, XGBoost, Statistical Analysis, Anomaly Detection,
-Feature Engineering, Predictive Modelling, LLM Reliability Research
+Applied AI & Research: Scikit-learn, XGBoost, Anomaly Detection, Feature Engineering,
+Predictive Modelling, LLM Reliability Research
+Quantitative Methods: Statistical Analysis, Time-Series Data, Backtesting Frameworks
+(Backtrader contributor), Quantitative Research Workflows, Financial Data Reconciliation,
+Operations Research
 Infrastructure & Quality: Docker, Kubernetes, GitHub Actions, pytest, Prometheus, Grafana,
 GCP Cloud Run, AWS (working knowledge), Linux
 
@@ -46,13 +52,15 @@ technical and business stakeholders.
 Backend / Data Engineer Intern
 SuperBuilt AI | Remote | Feb 2025 - May 2025
 - Developed Python and SQL financial-data pipelines processing 50,000+ records daily;
-implemented reconciliation, validation, idempotent retries, and dead-letter handling to
+implemented reconciliation, validation, idempotent retries, and dead-letter handling to
 achieve 99.4% reliability.
 - Improved PostgreSQL reconciliation queries from 8s to 900ms using composite indexes,
 partitioning, and schema optimization.
 - Implemented statistical anomaly detection with Z-score and Isolation Forest; exposed
 Prometheus metrics and investigated data-quality failures.
-Data Science Intern
+
+
+Data Science Intern
 YBI Foundation | Bengaluru, India | Jan 2024 - Feb 2024
 - Built a reproducible Python ML pipeline for ingestion, feature engineering, training, and
 evaluation, with 78% pytest coverage.
@@ -99,12 +107,12 @@ B.Tech - Computer Science & Business Systems
 Jain (Deemed-to-be University) | Bengaluru, India | 2022 - 2026
 - GPA: 8.3/10
 - Coursework: Data Structures & Algorithms, Operating Systems, DBMS, Operations Research,
-Business Analytics, Computer Networks.
+Business Analytics, Computer Networks.
 
 
 CERTIFICATIONS
 2024 | Meta Backend Developer Professional Certificate | Meta / Coursera
-2024 | Apache Kafka for Beginners - Developer Certificate | Confluent
+2024 | Apache Kafka for Beginners - Developer Certificate | Confluent
 2024 | Docker for Developers | Docker Inc.
 2024 | GitHub Actions CI/CD | GitHub Skills
 2023 | Google Cloud Fundamentals | Google Cloud / Coursera

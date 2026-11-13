@@ -1506,3 +1506,113 @@ h1 {
     display: none;
   }
 }
+
+/* Recruiter-readable copy and contextual evidence, rendered as ordinary HTML. */
+.hero .hero-roles {
+  display: block;
+  font-size: clamp(10px, 1.1vw, 14px);
+  letter-spacing: 0.09em;
+  text-transform: none;
+  font-weight: 500;
+}
+.hero-subline {
+  max-width: 65ch;
+  margin: 15px auto 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.summary-copy {
+  max-width: 72ch;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: -0.02em;
+}
+.summary-copy > p + p {
+  margin-top: 20px;
+}
+.proof-grid {
+  gap: 28px;
+}
+.proof-label {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-top: 12px;
+}
+.proof-meaning {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 12px;
+  line-height: 1.7;
+}
+.proof-context {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.how-work {
+  border-top: 1px solid var(--line);
+  margin-top: 42px;
+  padding-top: 26px;
+}
+.how-work > h3 {
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+.how-work-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.how-work-steps > li > strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--green);
+}
+.how-work-steps ul {
+  list-style: none;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.how-work-steps ul li {
+  display: inline;
+}
+.how-work-steps ul li:not(:last-child):after {
+  content: ", ";
+}
+@media (max-width: 767px) {
+  .hero .hero-roles {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    max-width: 36ch;
+    margin-inline: auto;
+  }
+  .hero-subline {
+    margin-top: 14px;
+  }
+  .summary-copy {
+    font-size: 18px;
+  }
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .proof-grid .proof-value {
+    font-size: 40px;
+  }
+  .how-work-steps {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .hero {
+    min-height: 920px;
+  }
+}
