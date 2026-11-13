@@ -59,3 +59,7 @@ Unrelated pre-existing working-tree changes and asset deletions are excluded fro
 ## Resume replacement — 13 Nov 2026
 
 Replaced `/public/resume.pdf` with the exact supplied `Chirantha_KM_AiDP_.pdf` (2 pages). SHA-256 matches the source. Existing download links still use `Chirantha_K_M_Resume.pdf`. This supplied document supersedes the generated resume described above; do not run the fallback PDF generator to overwrite it unless requested. Updated the extracted text artifact.
+
+## Hosting dependency fix — 13 Nov 2026
+
+The initial Vercel preview selected the stale Yarn lockfile and installed Lenis 1.1.6, whose types lack the `autoRaf` and `anchors` options used by the tested 1.3.15 version. Removed the stale Yarn lockfile, declared pnpm 10.27.0, and pinned Lenis to the validated 1.3.15 version so local and hosted builds use one dependency graph.
