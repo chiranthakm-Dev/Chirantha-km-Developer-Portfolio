@@ -55,3 +55,7 @@ Unrelated pre-existing working-tree changes and asset deletions are excluded fro
 - Local review only; nothing pushed or deployed.
 
 - Branding refinement: replaced CKM initial marks in the header/footer with the plain text “chiranth km”, removed the decorative dot, and adjusted mobile header spacing.
+
+## Resume replacement — 13 Nov 2026
+
+Replaced `/public/resume.pdf` with the exact supplied `Chirantha_KM_AiDP_.pdf` (2 pages). SHA-256 matches the source. Existing download links still use `Chirantha_K_M_Resume.pdf`. This supplied document supersedes the generated resume described above; do not run the fallback PDF generator to overwrite it unless requested. Updated the extracted text artifact.

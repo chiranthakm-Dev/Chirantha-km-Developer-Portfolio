@@ -437,6 +437,7 @@ export const content = {
   ],
   // TODO: Hindi proficiency varies by source; omit proficiency labels until confirmed.
   languages: "English · Kannada · Hindi",
+  // Download uses the supplied Chirantha_KM_AiDP_.pdf verbatim; do not regenerate unless requested.
   resumePath: "/resume.pdf",
   resumeFilename: "Chirantha_K_M_Resume.pdf",
 } as const;

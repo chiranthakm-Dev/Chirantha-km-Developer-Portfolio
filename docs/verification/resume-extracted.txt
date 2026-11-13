@@ -1,139 +1,103 @@
-Chirantha K M
-Python Engineer | Financial Data Platforms | Applied AI/ML
-Bengaluru, India | +91 83102 28282 | chirantha.km15@gmail.com
-https://github.com/chirantha-km
-https://www.linkedin.com/in/chirantha-km
-https://chirantha-km-developer-portfolio.vercel.app
+                                                            CHIRANTHA K M
+    PYTHON ENGINEER · APPLIED AI/ML · ENTERPRISE DATA PLATFORMS · FULL-STACK
+                                     Bengaluru, India | +91 83102 28282 | chirantha.km15@gmail.com
+                     github.com/chirantha-km | linkedin.com/in/chirantha-km | chirantha-km-developer-portfolio.vercel.app
 
 
 SUMMARY
-I'm a Python engineer who builds software that handles financial data accurately and at
-scale. That means pipelines that collect and clean thousands of records a day, APIs that
-other apps rely on, and machine-learning models that spot unusual patterns.
-At SuperBuilt AI, I built pipelines that process 50,000+ financial records daily with 99.4%
-reliability, and made the database queries that check those records about 10x faster. I also
-research how to detect when large language models give wrong or made-up answers.
-Based in Bengaluru. I work in English, Kannada, and Hindi.
 
+Python software and applied AI/ML engineer experienced in building production data pipelines, backend APIs, full-stack
+applications, and statistical ML solutions. Processed 50,000+ financial records daily with 99.4% reliability; improved SQL
+reconciliation query performance ~10×. Experienced in end-to-end technical delivery, observability, and cross-functional
+collaboration; researching LLM output validation and hallucination detection.
 
-SKILLS
-Programming & Data: Python, SQL, Go, C++, Pandas, NumPy, Data Structures & Algorithms,
-Object-Oriented Programming
-Backend & Platforms: FastAPI, REST APIs, Kafka, Redis, WebSockets, JWT / RBAC, PostgreSQL,
-MongoDB
-Applied AI & Research: Scikit-learn, XGBoost, Anomaly Detection, Feature Engineering,
-Predictive Modelling, LLM Reliability Research
-Quantitative Methods: Statistical Analysis, Time-Series Data, Backtesting Frameworks
-(Backtrader contributor), Quantitative Research Workflows, Financial Data Reconciliation,
-Operations Research
-Infrastructure & Quality: Docker, Kubernetes, GitHub Actions, pytest, Prometheus, Grafana,
-GCP Cloud Run, AWS (working knowledge), Linux
+TECHNICAL SKILLS
 
+Programming & Data Python, OOP, data structures, Pandas, NumPy, data ingestion, transformation, validation
+Applications & APIs FastAPI, REST APIs, full-stack web/mobile applications, microservices, integrations, JWT, RBAC
+Enterprise Data PostgreSQL, SQL, financial data, reconciliation, query optimization, indexing, partitioning, schema design
+Applied AI/ML Scikit-learn, XGBoost, anomaly detection, feature engineering, model evaluation; LLM reliability research
+Cloud & Delivery Git, pytest, integration testing, CI/CD, GitHub Actions, Docker, Kubernetes, AWS (working knowledge), GCP
+Streaming & Operations Kafka, Redis, event-driven pipelines, Prometheus, Grafana, logging, reliability, retry logic
 
 EXPERIENCE
-Quant Analyst & Tech
-Reverb Inc. | Remote | May 2026 - Sep 2026
-- Translated quantitative research questions into reproducible data workflows, experiments,
-and Python-based solutions; refined approaches using results and stakeholder feedback.
-- Owned data preparation, quantitative analysis, debugging, and technical delivery from
-problem definition through implementation in collaboration with stakeholders.
 
+Reverb Inc.                                                                                              Remote
+Quant Analyst & Tech                                                                                     May 2026 – Sep 2026
 
-Full-Stack Engineer & Technical Lead (Intern)
-MSR Solutions | Bengaluru, India | Dec 2025 - May 2026
-- Independently shipped production web, mobile, admin, and CRM applications, designing
-backend APIs, data integrations, and maintainable services.
-- Developed an ML-powered estimation feature, translating quantitative cost and timeline
-models into an end-user product.
-- Led architecture, implementation, testing, and deployments through rapid iterations with
-technical and business stakeholders.
+   Translated ambiguous quantitative business questions into data workflows, experiments, and implementable technical solutions with
+     stakeholders.
+   Owned data preparation, analysis, debugging, and end-to-end delivery; iterated on solutions based on results and business needs.
+MSR Solutions                                                                                            Bengaluru, India
+Full-Stack Engineer & Technical Lead (Intern)                                                            Dec 2025 – May 2026
 
+   Sole engineer shipping production web, mobile, admin, and CRM applications; designed backend APIs, integrations, and maintainable
+     services.
+   Built an ML-powered estimation feature using cost and timeline models; owned architecture, implementation, testing, and production
+     deployment.
+SuperBuilt AI                                                                                            Remote
+Backend / Data Engineer Intern                                                                           Feb 2025 – May 2025
 
-Backend / Data Engineer Intern
-SuperBuilt AI | Remote | Feb 2025 - May 2025
-- Developed Python and SQL financial-data pipelines processing 50,000+ records daily;
-implemented reconciliation, validation, idempotent retries, and dead-letter handling to
-achieve 99.4% reliability.
-- Improved PostgreSQL reconciliation queries from 8s to 900ms using composite indexes,
-partitioning, and schema optimization.
-- Implemented statistical anomaly detection with Z-score and Isolation Forest; exposed
-Prometheus metrics and investigated data-quality failures.
+   Engineered Python/SQL financial data pipelines handling 50,000+ records daily; implemented validation, reconciliation, retries, and
+     dead-letter routing for 99.4% reliability.
+   Optimized PostgreSQL reconciliation queries using composite indexes and partitioning, cutting latency from 8s to 900ms (~10×).
+   Built statistical anomaly detection using Z-score and Isolation Forest; added Prometheus observability and resolved data-quality
+     failures.
+YBI Foundation                                                                                           Bengaluru, India
+Data Science Intern                                                                                      Jan 2024 – Feb 2024
 
+   Built reproducible Python ML pipelines for ingestion, feature engineering, training, and evaluation with 78% pytest coverage.
+   Reduced debugging MTTR from 4 hours to under 45 minutes with structured logging and Grafana dashboards.
+SELECTED DATA, AI/ML & SOFTWARE PROJECTS
 
-Data Science Intern
-YBI Foundation | Bengaluru, India | Jan 2024 - Feb 2024
-- Built a reproducible Python ML pipeline for ingestion, feature engineering, training, and
-evaluation, with 78% pytest coverage.
-- Reduced debugging MTTR from 4 hours to under 45 minutes using structured logging and
-Grafana dashboards.
-
-
-
-
-PROJECTS
 Real-Time Statistical Anomaly Detection Engine
-- Processed 500 transactions/sec through Kafka, combining Z-score, IQR, and Isolation Forest
-with PostgreSQL persistence, API endpoints, and latency monitoring.
-Stack: Python, FastAPI, Kafka, Scikit-learn, PostgreSQL, Prometheus, Grafana, Docker
-Production REST API - Task & Team Management
-- Achieved sub-100ms p95 latency under 500 concurrent users and 84% pytest coverage with
-JWT/RBAC, Redis rate limiting, and automated testing.
-Stack: FastAPI, PostgreSQL, Redis, JWT, Docker, pytest, GitHub Actions
+PYTHON · FASTAPI · KAFKA · SCIKIT-LEARN · POSTGRESQL · PROMETHEUS · GRAFANA · DOCKER
+   Processed 500 transactions/sec through Kafka; combined Z-score, IQR, and Isolation Forest with PostgreSQL persistence, API endpoints,
+     and latency monitoring.
+
+Production REST API — Task & Team Management
+FASTAPI · POSTGRESQL · REDIS · JWT · DOCKER · PYTEST · GITHUB ACTIONS
+   Shipped tested REST APIs with JWT/RBAC and Redis rate limiting; achieved sub-100ms p95 latency under 500 concurrent users and 84%
+     pytest coverage.
+
 Real-Time Event Streaming & Notification Service
-- Handled 1,000+ events/min with Kafka consumer groups, dead-letter routing, idempotency,
-Redis, and consumer-lag monitoring.
-Stack: Python, FastAPI, Kafka, WebSockets, PostgreSQL, Redis, Prometheus
-Ovia - Predictive Modelling Research
-- Developed a reproducible XGBoost workflow for feature processing, evaluation, and FastAPI
-inference with PostgreSQL; research accepted for IEEE NELEX 2026.
-Stack: Python, XGBoost, FastAPI, PostgreSQL, Docker
+PYTHON · FASTAPI · KAFKA · WEBSOCKETS · POSTGRESQL · REDIS · PROMETHEUS
+   Handled 1,000+ events/min with Kafka consumer groups, dead-letter routing, idempotency, Redis, and consumer-lag monitoring.
+Ovia — Predictive Modelling Research (IEEE NELEX 2026)
+PYTHON · XGBOOST · FASTAPI · POSTGRESQL · DOCKER
+   Developed an XGBoost predictive modelling workflow with data processing, evaluation, API inference, and PostgreSQL; accepted as an
+     IEEE conference paper.
 
+AI RESEARCH & PUBLICATIONS
 
-RESEARCH & PUBLICATIONS
-Output Validation & Hallucination Detection for LLM Inference Systems
-2025 - present | Ongoing research
-- Research on LLM inference output validation, hallucination detection, model failure
-analysis, and reliability evaluation.
-Ovia: XGBoost-Based Predictive Modelling for Women's Wellness Tracking
-2026 | IEEE NELEX 2026 | Conference accepted
-- Predictive modelling research using XGBoost, feature processing, evaluation, and API
-inference.
-Fast Fashion's Impact on Youth & Sustainability
-2024 | Asia Journal of Ethics and Sustainability | Journal publication
-
+   2025–present: Research on LLM inference output validation, hallucination detection, model failure analysis, and response reliability
+     evaluation.
+   2026: IEEE NELEX conference paper — Ovia: XGBoost-Based Predictive Modelling for Women’s Wellness Tracking.
+   2024: Journal publication — Fast Fashion’s Impact on Youth & Sustainability, Asia Journal of Ethics and Sustainability.
 
 EDUCATION
-B.Tech - Computer Science & Business Systems
-Jain (Deemed-to-be University) | Bengaluru, India | 2022 - 2026
-- GPA: 8.3/10
-- Coursework: Data Structures & Algorithms, Operating Systems, DBMS, Operations Research,
-Business Analytics, Computer Networks.
 
+Jain (Deemed-to-be University)                                                                            Bengaluru, India
+B.Tech — Computer Science & Business Systems | GPA: 8.3/10                                                2022 – 2026
+
+Relevant coursework: Data Structures & Algorithms, DBMS, Operating Systems, Operations Research, Business Analytics, Computer
+Networks.
 
 CERTIFICATIONS
-2024 | Meta Backend Developer Professional Certificate | Meta / Coursera
-2024 | Apache Kafka for Beginners - Developer Certificate | Confluent
-2024 | Docker for Developers | Docker Inc.
-2024 | GitHub Actions CI/CD | GitHub Skills
-2023 | Google Cloud Fundamentals | Google Cloud / Coursera
-2023 | Linux Command Line Essentials (NDG) | Cisco NetAcad
-2023 | Machine Learning with Python | IBM SkillsBuild
 
+Meta Backend Developer Professional Certificate (2024) · Apache Kafka — Confluent (2024) · Docker for Developers (2024)
+GitHub Actions CI/CD (2024) · Google Cloud Fundamentals (2023) · Linux Command Line Essentials (2023) · IBM Machine Learning with
+Python (2023)
 
 ACHIEVEMENTS & LEADERSHIP
-2025 | Top 5 Finalist - Indegene Hackathon: 2,000+ teams; real-time anomaly detection
-backend.
-2024 | Open-Source Contributor: Backtrader & FastAPI-pagination.
-2023 | TCS IT Quiz - National Level Representative: Karnataka state selection.
-2023 | Founder & Technical Lead - Echo Club: FinTech-focused student community, Jain
-University; 2023-present.
-2022 | Founding Member & Tech/PR Lead - Tech Council SCSE: Led technical and PR operations
-for three years.
-2022 | Technical Lead - Cultural Club: Managed AV infrastructure for large-scale campus
-events.
 
+   Top 5 finalist, Indegene Hackathon 2025 (2,000+ teams) — real-time anomaly detection backend.
+   Open-source contributor to Backtrader and FastAPI-pagination (2024).
+   Founder & Technical Lead, Echo Club — FinTech-focused student community, Jain University (2023–present).
+   Founding Member & Tech/PR Lead, Tech Council SCSE — led technical and PR operations for three years.
+   TCS IT Quiz — National Level Representative, Karnataka state selection (2023).
 
-CONTACT
-chirantha.km15@gmail.com | +91 83102 28282
-English | Kannada | Hindi
+LANGUAGES
+
+English (C1 professional) · Kannada (native) · Hindi (full proficiency)
 
