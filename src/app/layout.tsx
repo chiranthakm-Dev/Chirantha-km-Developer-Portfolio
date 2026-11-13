@@ -21,10 +21,20 @@ const mono = JetBrains_Mono({
 });
 export const metadata: Metadata = {
   metadataBase: new URL(c.url),
-  title: c.title,
+  title: { default: c.title, template: c.titleTemplate },
   description: c.description,
   alternates: { canonical: "/" },
   authors: [{ name: c.name }],
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=2", sizes: "32x32", type: "image/x-icon" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png?v=2", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: c.title,
     description: c.description,

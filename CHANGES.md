@@ -63,3 +63,11 @@ Replaced `/public/resume.pdf` with the exact supplied `Chirantha_KM_AiDP_.pdf` (
 ## Hosting dependency fix — 13 Nov 2026
 
 The initial Vercel preview selected the stale Yarn lockfile and installed Lenis 1.1.6, whose types lack the `autoRaf` and `anchors` options used by the tested 1.3.15 version. Removed the stale Yarn lockfile, declared pnpm 10.27.0, and pinned Lenis to the validated 1.3.15 version so local and hosted builds use one dependency graph.
+
+## Browser tab and sharing identity — 13 Nov 2026
+
+- Set the exact requested name-first title, matching Open Graph/Twitter titles, a reusable `%s | Chirantha K M` title template, and the supplied financial-data meta description. The requested title is 63 characters; its wording is preserved.
+- Replaced the old emoji favicon with an outlined cream C on a forest-green rounded square. SVG uses paths only; generated a 32px ICO, 180px Apple touch icon, 192px and 512px PNGs, and a web manifest. Icon links include a version query to refresh cached favicons.
+- Moved the favicon from the App Router's automatic file route to explicit public icon assets to avoid duplicate/conflicting favicon metadata.
+- Updated the 1200×630 cream/green social preview with the matching outlined monogram. Website headings remain selectable HTML.
+- `npm run build` passed. Checked the generated title, description, canonical, icon links, manifest and matching social titles in prerendered HTML; verified all icon dimensions and the 1200×630 PNG. Regenerate static assets with `node scripts/generate-branding.cjs`.

@@ -20,9 +20,10 @@ export const content = {
   phoneHref: "tel:+918310228282",
   github: "https://github.com/chirantha-km",
   linkedin: "https://www.linkedin.com/in/chirantha-km",
-  title: "Chirantha K M — Python Engineer & Quantitative Research",
+  title: "Chirantha K M | Python Engineer, Financial Data & Applied AI/ML",
+  titleTemplate: "%s | Chirantha K M",
   description:
-    "Python engineer working across financial data platforms, backend APIs, applied AI/ML and quantitative research. Explore experience, projects and publications.",
+    "Python engineer building financial-data pipelines, FastAPI services and ML-enabled systems. 50,000+ records processed daily at 99.4% reliability. Based in Bengaluru.",
   roles: ["Python Engineer", "Financial Data Platforms", "Applied AI/ML"],
   portrait: {
     src: "/assets/PROFILE PICTURE.png",

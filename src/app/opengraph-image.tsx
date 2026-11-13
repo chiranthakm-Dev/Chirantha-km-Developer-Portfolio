@@ -6,6 +6,7 @@ export default function Image() {
   return new ImageResponse(
     <div
       style={{
+        position: "relative",
         background: "#FAF3EE",
         color: "#1F4D3F",
         display: "flex",
@@ -16,6 +17,18 @@ export default function Image() {
         height: "100%",
       }}
     >
+      <svg
+        width="64"
+        height="64"
+        viewBox="0 0 64 64"
+        style={{ position: "absolute", top: 54, right: 80 }}
+      >
+        <rect width="64" height="64" rx="14" fill="#1F4D3F" />
+        <path
+          d="M46 16H29C19 16 14 22 14 32s5 16 15 16h17v-9H30c-4 0-6-2-6-7s2-7 6-7h16Z"
+          fill="#FAF3EE"
+        />
+      </svg>
       <div
         style={{
           display: "flex",
