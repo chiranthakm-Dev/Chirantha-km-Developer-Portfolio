@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Inter, JetBrains_Mono } from "next/font/google";
 import { content as c } from "@/data/content";
 import Navigation from "@/components/portfolio/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
         </div>
         <Navigation />
         {children}
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
